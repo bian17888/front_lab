@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单元素</title>
+<link rel="stylesheet" href="css/xx_wrap.css" type="text/css" media="all" />
+</head>
+
+<body class="A_base">
+<!-- header -->
+<div class="header brbg">
+    <div class="header-inner"> <span>header</span> </div>
+</div>
+<!-- xx_wrap -->
+<div class="xx_wrap">
+    <div class="column-full brbg">
+        <div class="forms-cont">
+            <form action="">
+                <table class="forms-default" cellpadding="0" cellspacing="0" summary="默认样式的表单元素">
+                    <caption>
+                    【默认】表单元素
+                    </caption>
+                    <colgroup>
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="400" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" maxlength="10" /></td>
+                            <td><input type="password"></td>
+                            <td><input type="file" /></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" checked=" " name="" value="" /></td>
+                            <td><input type="radio" checked=" " name="" value="" /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="按钮submit" /></td>
+                            <td><input type="button" value="按钮button" /></td>
+                            <td><input type="reset" value="按钮reset" /></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit">按钮submit</button></td>
+                            <td><button type="submit">按钮button</button></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><select name="" id="">
+                                    <option value="">请选择：</option>
+                                    <option value="">前端开发</option>
+                                    <option value="">UI设计</option>
+                                    <option value="" disabled="disabled">禁用选项</option>
+                                </select></td>
+                            <td><select name="" id="">
+                                    <option value="">请选择：</option>
+                                    <optgroup label="A组">
+                                    <option value="">前端开发</option>
+                                    <option value="">前端开发</option>
+                                    </optgroup>
+                                    <optgroup label="B组" disabled="disabled">
+                                    <option value="">UI设计</option>
+                                    <option value="">UI设计</option>
+                                    </optgroup>
+                                </select></td>
+                            <td><textarea name="" id="" cols="20" rows="5"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="box-space"></div>
+            <form class="form-default" action="">
+                <table class="forms-default" cellpadding="0" cellspacing="0" summary="默认样式的表单元素">
+                    <caption>
+                    【应用】默认样式，修复兼容性
+                    </caption>
+                    <colgroup>
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="400" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><p>
+                                    <label class="input-label" for="input-name"> <span>姓名：</span> </label>
+                                    <input class="input" id="input-name" type="text" maxlength="10" placeholder="请输入用户名" />
+                                </p></td>
+                            <td><p>
+                                    <label class="input-label" for="input-passwd"> <span>密码：</span></label>
+                                    <input class="input" id="input-passwd" type="password">
+                                </p></td>
+                            <td><p>
+                                    <label class="input-label" for="input-update"> <span>上传文件：</span></label>
+                                    <input class="input-file" id="input-update" type="file" />
+                                </p></td>
+                        </tr>
+                        <tr>
+                            <td><p>
+                                    <label class="input-label" for="input-email"> <span>Email：</span></label>
+                                    <input class="input" id="input-email" type="email" maxlength="" />
+                                </p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><p>
+                                    <label class="select-label" for=""><span>请选择职业：</span></label>
+                                    <select class="select" name="" id="">
+                                        <option value="">请选择：</option>
+                                        <option value="">前端开发</option>
+                                        <option value="">UI设计</option>
+                                        <option value="" disabled="disabled">禁用选项</option>
+                                    </select>
+                                </p></td>
+                            <td><p>
+                                    <label class="select-label" for=""><span>请选择职业：</span></label>
+                                    <select class="select select-f14" name="" id="">
+                                        <option value="">请选择：</option>
+                                        <optgroup label="A组">
+                                        <option value="">前端开发</option>
+                                        <option value="">前端开发</option>
+                                        </optgroup>
+                                        <optgroup label="B组" disabled="disabled">
+                                        <option value="">UI设计</option>
+                                        <option value="">UI设计</option>
+                                        </optgroup>
+                                    </select>
+                                </p></td>
+                            <td><p>
+                                    <label class="textarea-label" for=""><span>请输入内容：</span></label>
+                                    <textarea class="textarea" name="" id="" cols="26" rows="6" placeholder="请输入内容,字数在100左右..."></textarea>
+                                </p></td>
+                        </tr>
+                        <tr>
+                            <td><label class="label-checkbox" for=""> <span>图书</span>
+                                    <input class="checkbox" type="checkbox" name="" value="" />
+                                </label>
+                                <label class="label-checkbox" for=""> <span>音像</span>
+                                    <input class="checkbox" type="checkbox" name="" value="" />
+                                </label></td>
+                            <td><label class="label-radio" for=""> <span>男</span>
+                                    <input class="radio" type="radio" checked="checked" name="gender" value="" />
+                                </label>
+                                <label class="label-radio" for=""> <span>女</span>
+                                    <input class="radio" type="radio" name="gender" value="" />
+                                </label></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="box-space"></div>
+            <form class="form-defined" action="">
+                <table class="forms-default" cellpadding="0" cellspacing="0" summary="默认样式的表单元素">
+                    <caption>
+                    【应用】自定义样式 bootstrap
+                    </caption>
+                    <colgroup>
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="400" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><p>
+                                    <label class="boot-label" for="input-name"> <span>姓名：</span> </label>
+                                    <input class="boot-input w110" id="input-name" type="text" maxlength="10" placeholder="请输入用户名" />
+                                </p></td>
+                            <td><p>
+                                    <label class="boot-label" for="input-passwd"> <span>密码：</span></label>
+                                    <input class="boot-input w110" id="input-passwd" type="password">
+                                </p></td>
+                            <td><p>
+                                    <label class="boot-label" for="input-update"> <span>上传文件：</span></label>
+                                    <span class="boot-file"> <span class="boot-file-text">点击上传文件...</span>
+                                    <input type="hidden" />
+                                    <input class="boot-input-file" id="input-update" type="file" />
+                                    </span> </p></td>
+                        </tr>
+                        <tr>
+                            <td><p>
+                                    <label class="boot-label" for="input-email"> <span>Email：</span></label>
+                                    <input class="boot-input w110" id="input-email" type="email" maxlength="" />
+                                </p></td>
+                            <td><p>
+                                    <label class="boot-label" for="input-email"> <span>Error：</span></label>
+                                    <input class="boot-input boot-error w110" id="input-email" type="email" maxlength="" />
+                                </p></td>
+                            <td><p>
+                                    <label class="boot-label" for="input-email"> <span>Disabled：</span></label>
+                                    <input class="boot-input w110" id="input-email" type="text" maxlength="" disabled="disabled" placeholder="disabled" />
+                                </p></td>
+                        </tr>
+                        <tr>
+                            <td><p>
+                                    <label class="boot-label" for=""><span>请选择职业：</span></label>
+                                    <select class="boot-select" name="" id="">
+                                        <option value="">请选择：</option>
+                                        <option value="">前端开发</option>
+                                        <option value="">UI设计</option>
+                                        <option value="" disabled="disabled">禁用选项</option>
+                                    </select>
+                                </p></td>
+                            <td><p>
+                                    <label class="boot-label" for=""><span>请选择职业：</span></label>
+                                    <select class="boot-select-f14" name="" id="">
+                                        <option value="">请选择：</option>
+                                        <option value="">前端开发</option>
+                                        <option value="">UI设计</option>
+                                        <option value="" disabled="disabled">禁用选项</option>
+                                    </select>
+                                </p></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="box-space"></div>
+            <form class="form-defined" action="">
+                <table class="forms-default" cellpadding="0" cellspacing="0" summary="默认样式的表单元素">
+                    <caption>
+                    【应用】自定义样式
+                    </caption>
+                    <colgroup>
+                    <col width="200" />
+                    <col width="200" />
+                    <col width="400" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td><p>
+                                    <label for="" class="skin-label-title">姓名：</label>
+                                    <input type="text" class="skin-input w110">
+                                </p></td>
+                            <td colspan="2"><p>
+                                    <label for="" class="skin-label-title">密码：</label>
+                                    <input class="skin-input w110" id="input-passwd" type="password">
+                                    <span class="skin-help-inline">文字说明</span> </p></td>
+                        </tr>
+                        <tr>
+                            <td><div class="clearfix">
+                                    <label class="skin-label-title pull-l mr-6" for="">职业：</label>
+                                    <div class="form-area pull-l clearfix">
+                                        <div class="skin-select-wrap pull-left mr-10" style="width:110px;"> <span class="skin-select">请选择<i class="skin-select-icon"></i></span>
+                                            <ul style="display:none; width:133px;">
+                                                <li class="hover"><span>活动形式A</span></li>
+                                                <li><span>活动形式B</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><label class="skin-btn-checkbox skin-btn-checkbox-p0"><i class="skin-checkbox skin-checkbox-input"></i><span>男</span></label>
+                                <label class="skin-btn-checkbox skin-btn-checkbox-p0"><i class="skin-checkbox skin-checkbox-input skin-checkbox-input-active"></i><span>女</span></label></td>
+                            <td><label class="skin-btn-radio" for=""><i class="skin-radio skin-radio-input"></i><span>组织</span></label>
+                                <label class="skin-btn-radio" for=""><i class="skin-radio skin-radio-input skin-radio-input-active"></i><span>机构</span></label></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><div class="skin-div-time clearfix"> <span class="skin-span-time">
+                                    <input type="text" placeholder="0000年00月00日 00时00分" class="skin-input">
+                                    <i class="skin-icon skin-icon-clock-grey"></i> </span> </div></td>
+                            <td colspan="2"><div class="skin-div-time clearfix"> <span class="skin-span-time">
+                                    <input type="text" placeholder="0000年00月00日 00时00分" class="skin-input">
+                                    <i class="skin-icon skin-icon-clock-red"></i> </span> <span class="skin-span">活动结束</span> </div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><div class="skin-div-time skin-div-area clearfix"> <span class="skin-span-time">
+                                    <input type="text" placeholder="北京市海淀区清华科技园1号搜狐网络大厦12F演播室" class="skin-input w100">
+                                    <i class="skin-icon skin-icon-map"></i> </span> </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer brbg">
+    <div class="footer-inner"> <span>footer</span> </div>
+</div>
+</body>
+</html>

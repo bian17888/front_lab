@@ -1,0 +1,14 @@
+body	-- #444 , #666
+
+
+nav	-- #fff ;
+nav-hover	-- #dfa41b
+nav-sub 	-- #444
+
+
+×¨Ìâ	-- #000
+
+
+footer  -- #000; 
+	
+	

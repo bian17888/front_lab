@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>搜狐公共模块</title>
+<link rel="stylesheet" href="css/xx_wrap.css" type="text/css" media="all" />
+</head>
+<body>
+
+<!-- 页头，普通版 (start) -->
+<div class="s-hd" id="s-hd-normal">
+    <div data-type="roll" data-appid="1077" id="isohu-topbar">
+        <div class="isohu-topbar-wrapper">
+            <div id="innerToolBar" class="innerToolBar">
+                <div class="tb-nav tb-nav-myhome-title">
+                    <ul class="page-nav">
+                        <li class="logo"><span><a href="http://www.sohu.com" title="搜狐首页" target="_blank"><img src="http://news.sohu.com/upload/itoolbar/channel/sohu_channel_logo_0507.gif" title="搜狐首页"></a><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-chevron-down"></i></a></span>
+                            <ul class="dropdown-menu">
+                                <li>其他帐号登录：</li>
+                                <li><a href="http://plus.sohu.com/spassport/bind/40000001/qq?ru=http://i.sohu.com/login/passport/redirect.do" target="_blank" data-action="crosslogin" data-width="486" data-height="330" data-type="tencent"><i class="img-qq"></i>腾讯QQ</a></li>
+                                <li><a href="http://plus.sohu.com/spassport/bind/40000001/weibo?ru=http://i.sohu.com/login/passport/redirect.do" target="_blank" data-action="crosslogin" data-width="600" data-height="400" data-type="sina"><i class="img-sina"></i>新浪</a></li>
+                                <li><a href="http://plus.sohu.com/spassport/bind/40000001/renren?ru=http://i.sohu.com/login/passport/redirect.do" target="_blank" data-action="crosslogin" data-width="420" data-height="322" data-type="renren"><i class="img-ren"></i>人人网</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div style="display: none;" class="loading">loading...</div>
+                <div style="display: block;" id="tb_user" class="tb-user-unlogin">
+                    <div id="tb_user_login" class="tb-user-login">
+                        <div class="error" style="display:none"></div>
+                        <div id="simple_card" class="login-card" style="">
+                            <div class="ppselecter" style="position: absolute; display: none;">
+                                <table cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="" class="ppseltit" id="ppseltitId">请选择您的用户帐号类型</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="2"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="display: none;"></div>
+                            <div class="passportc">
+                                <form method="post" onsubmit="return PassportCardList[1].doLogin();" name="loginformsim" id="loginformsim">
+                                    <div class="simple-email-wrapper">
+                                        <input name="email" class="simple-email" value="test_act_001@sohu.com" title="用户名" autocomplete="off" disableautocomplete="" type="text">
+                                    </div>
+                                    <div class="simple-pwd-wrapper">
+                                        <input name="password" class="simple-pwd" title="密码" autocomplete="off" disableautocomplete="" value="" type="password">
+                                    </div>
+                                    <input class="simple-btn" value="登录" onfocus="this.blur()" alt="登录" type="submit">
+                                    <input value="" type="hidden">
+                                    <a href="http://i.sohu.com/login/reg.do?bru=http%3A%2F%2Fwww.sohu.com" target="_blank" title="注册">注册</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tb_addon"></div>
+                <div class="tb-nav tb-nav-inform">
+                    <ul class="page-nav">
+                        <li id="home_wrapper" class=""><a href="http://i.sohu.com" target="_blank" class="itoolbar-title" title="我的搜狐">我的搜狐</a></li>
+                        <li id="notice_wrapper" style="display:none"><a href="http://i.sohu.com/request/home/message.htm" class="itoolbar-title">消息</a><span id="notice_num" class="notice-num"></span>
+                            <div id="inform_cont_wrapper">
+                                <div class="inform-link"><span>你暂时没有新消息</span>，<a href="http://i.sohu.com/request/home/message.htm">查看消息</a></div>
+                                <ul class="inform-list">
+                                </ul>
+                                <div id="view_inform" class="view-inform-link"><a id="view_inform_dologin" href="javascript:void(0)">登录并查看</a></div>
+                            </div>
+                        </li>
+                        <li id="mail_wrapper"><a href="http://mail.sohu.com/" class="itoolbar-title" title="邮件">邮件</a><span id="mail_num" class="notice-num" "=""></span></li>
+                    </ul>
+                </div>
+                <div class="tb-nav tb-nav-app">
+                    <ul class="page-nav">
+                        <li id="album_wrapper" class=""><a href="http://pp.sohu.com/temp_photos" target="_blank" class="itoolbar-title" title="相册">相册</a><span id="photo_num" class="notice-num" "=""></span><span class="plus_one" style="display:none;">+1</span>
+                            <div style="display:none;" class="tb-prompt photolayer"><em class="trangle-ico"></em>
+                                <div class="photoContainer"></div>
+                                <div class="tb-prompt-info"><span class="max_limit">未登录只能保存14天</span><a href="http://pp.sohu.com/temp_photos" target="_blank" class="more">查看更多<i>&gt;&gt;</i></a></div>
+                            </div>
+                        </li>
+                        <li id="comment_wrapper" class=""><a title="说两句" class="itoolbar-title" href="http://pinglun.sohu.com/">说两句</a></li>
+                    </ul>
+                </div>
+                <div class="tb-nav tb-nav-tsohu" style="display:none">
+                    <ul class="page-nav">
+                        <li id="fans_wrapper" class=""><a href="http://t.sohu.com" class="itoolbar-title">粉丝</a><span id="fans_num" class="notice-num"></span></li>
+                        <li id="tcomment_wrapper"><a href="http://t.sohu.com" class="itoolbar-title">评论</a><span id="tcomment_num" class="notice-num" "=""></span></li>
+                        <li id="at_wrapper"><a href="http://t.sohu.com" class="itoolbar-title">@你</a><span id="at_num" class="notice-num" "=""></span></li>
+                        <li id="tmail_wrapper"><a href="http://t.sohu.com" class="itoolbar-title">私信</a><span id="tmail_num" class="notice-num" "=""></span></li>
+                        <li id="tnotice_wrapper"><a href="http://t.sohu.com" class="itoolbar-title">消息</a><span id="tnotice_num" class="notice-num" "=""></span></li>
+                    </ul>
+                </div>
+                <div class="tb-nav tb-nav-tsohu-title">
+                    <ul class="page-nav">
+                        <li id="tsohu_btn"><a class="tsohu-btn" href="http://t.sohu.com/jingxuan?mid=9393229311&amp;srcid=3002190006" id="btn_action_url" title=""><span class="btn-lf" id="btn_text">进入微博</span></a></li>
+                        <li id="title_wrapper" class="tsohu_title"><a href="http://t.sohu.com/home?srcid=3002190000" title="搜狐微博" target="_blank"><span id="timeline_Num" class="notice-num" style="display:none;"></span></a><a href="http://t.sohu.com" id="popbubble" target="_blank" class="popbubble" style="font:11px/12px arial;background: none repeat scroll 0 0 #D82521;border-color: #D6341F #A52D2C #A52D2C #D6341F;border-radius: 2px 2px 2px 2px;border-right: 1px solid #A52D2C;border-style: solid;border-width: 1px;color: #fff;float: left;font-size: 12px;height: 12px;line-height: 12px;margin: 8px 5px 0 -4px;min-width: 10px;padding: 0;display:none;text-align: center;white-space: nowrap;word-wrap: normal;">1</a></li>
+                        <li id="tb_tsohu_tactive" style="display:none"><a href="http://t.sohu.com" title="激活微博">立刻激活搜狐微博</a></li>
+                        <li id="tb_tsohu_news"><a href="http://t.sohu.com/jingxuan?mid=9392137803&amp;srcid=3002100071" title="“携巨款外逃美女高管”斐济落网">“携巨款外逃美女高管”斐济落网</a></li>
+                    </ul>
+                </div>
+                <div class="tsohu-card" id="tsohu_loginCard" style="display:none;">
+                    <div class="tsohu-card-hd">
+                        <div class="tsohu-card-arrow" id="tsohu-card-arrow"></div>
+                        <a class="tsohu-card-closeBtn" id="tsohu-card-closeBtn" title="关闭" href="javascript:void(0)"><span>关闭</span></a></div>
+                    <div class="tsohu-card-bd"></div>
+                </div>
+                <div class="tsohu-card" id="tsohu_notLoginCard" style="">
+                    <div class="tsohu-card-hd">
+                        <div style="left: 61px;" class="tsohu-card-arrow" id="tsohu_card_arrow2"></div>
+                        <a class="tsohu-card-closeBtn" id="tsohu_card_closeBtn2" title="关闭" href="javascript:void(0)"><span>关闭</span></a></div>
+                    <div class="tsohu-card-bd">
+                        <div class="tsohu-card-msg tmsg-card">
+                            <div class="tmsg-card-lf"><a href="http://t.sohu.com/jingxuan?mid=9393229311&amp;srcid=3002190005" target="_blank" id="tmsg_card_icon"><img src="http://s4.cr.itc.cn/mblog/icon/8d/dd/m_13105275417602.jpg" border="0" height="23" width="23"></a></div>
+                            <div class="tmsg-card-rt"><a id="tmsg_card_text" href="http://t.sohu.com/jingxuan?mid=9393229311&amp;srcid=3002190005" target="_blank"><strong class="nickname" style="display:inline">南都娱乐周刊</strong><img src="http://s1.t.itc.cn/mblog/resource/20131_9_10/v9gqt353173450142.png" style="vertical-align: middle;"><span style="padding-left:5px;">霍思燕已有8个月身孕，学腹中胎儿B超照捂眼卖萌。（图）</span></a></div>
+                            <div class="tmsg-card-bt" style="padding-left:25px;"><span style="display:none"></span><a href="http://t.sohu.com/jingxuan?mid=9393229311&amp;srcid=3002190005" target="_blank" id="tmsg_card_go2" class="tmsg-card-bt-a">去看看</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;" id="loginCard" class="login-card">
+                    <div class="ppselecter" style="position: absolute; display: none;">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td style="" class="ppseltit" id="ppseltitId">请选择您的用户帐号类型</td>
+                                </tr>
+                                <tr>
+                                    <td height="2"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="display: none;"></div>
+                    <div class="passportc">
+                        <form method="post" onsubmit="return PassportCardList[0].doLogin();" name="loginform">
+                            <div class="ppcontent" id="ppcontid">
+                                <ul class="card">
+                                    <div class="error" id="pperrmsg" style="display:none;"></div>
+                                    <li>用户名
+                                        <input name="email" class="ppinput" value="test_act_001@sohu.com" style="color:gray" autocomplete="off" disableautocomplete="" type="text">
+                                    </li>
+                                    <li>密&#12288;码
+                                        <input name="password" class="ppinput" autocomplete="off" disableautocomplete="" type="password">
+                                    </li>
+                                    <dt><span>
+                                        <input name="persistentcookie" value="1" checked="checked" type="checkbox">
+                                        记住登录状态</span>
+                                        <input class="sign" value="登录" onfocus="this.blur()" src="http://news.sohu.com/upload/itoolbar/default/spacer.gif" alt="登录" type="submit">
+                                    </dt>
+                                    <dl>
+                                        <a href="http://i.sohu.com/login/reg.do?bru=http%3A%2F%2Fwww.sohu.com" target="_blank">注册新用户</a><a href="http://passport.sohu.com/web/recover.jsp" target="_blank">忘记密码</a><a href="http://passport.sohu.com/help/" target="_blank">帮助中心</a>
+                                    </dl>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link type="text/css" rel="stylesheet" href="http://news.sohu.com/upload/itoolbar/channel/itoolbar.201306261718.css" charset="UTF-8">
+    <script src="http://news.sohu.com/upload/itoolbar/itoolbar.channel.loader.201306261718.js" charset="UTF-8"></script>
+    <div id="fullscreenad" style="display:none"></div>
+    <style>
+#isohu-topbar .isohu-topbar {width: 950px;}
+#innerToolBar { width: 950px;}
+</style>
+    <style>
+#commend-headNav {overflow:hidden;color:#999;font: 14px/24px "\5B8B\4F53";height: 24px;margin:10px auto 9px;width:950px;}
+#commend-headNav a {color: #333333;margin:0 5px;text-decoration:none;}
+#commend-headNav a.first{margin-left:0;}
+#commend-headNav a.last{margin-right:0;}
+#commend-headNav a.n3{margin-right:6px}
+#commend-headNav a:hover{color: #CC0000;text-decoration:underline;}
+</style>
+    <div class="area" id="commend-headNav"><a class="first" href="http://www.sohu.com/">首页</a>-<a href="http://news.sohu.com/">新闻</a>-<a class="n3" href="http://mil.sohu.com/">军事</a>-<a href="http://cul.sohu.com/">文化</a>-<a href="http://history.sohu.com/">历史</a>-<a class="n3" href="http://sports.sohu.com/">体育</a>-<a href="http://sports.sohu.com/nba.shtml">NBA</a>-<a href="http://tv.sohu.com/">视频</a>-<a class="n3" href="http://yule.sohu.com/">娱乐</a>-<a href="http://business.sohu.com/">财经</a>-<a href="http://stock.sohu.com/">股票</a>-<a href="http://it.sohu.com/">IT</a>-<a href="http://auto.sohu.com/">汽车</a>-<a href="http://house.sohu.com/">房产</a>-<a href="http://fashion.sohu.com/">时尚</a>-<a href="http://women.sohu.com/">女人</a>-<a href="http://men.sohu.com/">男人</a>-<a href="http://baobao.sohu.com/">母婴</a>-<a href="http://learning.sohu.com/">教育</a>-<a href="http://health.sohu.com/">健康</a>-<a href="http://travel.sohu.com/">旅游</a>-<a class="last" href="http://club.sohu.com/" target="_blank">BBS</a></div>
+</div>
+<!-- 页头，普通版 (end) -->
+
+<p>
+    <br />
+    <br />
+    <br />
+</p>
+
+<!-- 页头，简版 (start) -->
+<div class="s-hd" id="s-hd-simple">
+    <div id="channelNav" class="Area">
+        <div style="float:left;"> <a href="http://www.sohu.com/" target="_blank"> <img height="22" src="http://images.sohu.com/uiue/sohu_logo/2005/sohu_logo2.gif" border="0" class="left"> </a> <a href="http://gongyi.sohu.com"> <img height="22" src="http://images.sohu.com/uiue/sohu_logo/2006/gongyi_logo2.gif" border="0" class="left"> </a> </div>
+        <ul class="right">
+            <li> <a href="http://www.sohu.com/"> 搜狐首页 </a> </li>
+            <li>-</li>
+            <li class="red"> <a href="http://news.sohu.com/"> 新闻 </a> </li>
+            <li>-</li>
+            <li> <a href="http://sports.sohu.com/"> 体育 </a> </li>
+            <li>-</li>
+            <li> <a href="http://s.sohu.com/"> S </a> </li>
+            <li>-</li>
+            <li> <a href="http://yule.sohu.com/"> 娱乐 </a> </li>
+            <li>-</li>
+            <li> <a href="http://tv.sohu.com/yule/"> V </a> </li>
+            <li>-</li>
+            <li class="red"> <a href="http://business.sohu.com/"> 财经 </a> </li>
+            <li>-</li>
+            <li> <a href="http://it.sohu.com/"> IT </a> </li>
+            <li>-</li>
+            <li> <a href="http://auto.sohu.com/"> 汽车 </a> </li>
+            <li>-</li>
+            <li> <a href="http://house.focus.cn/"> 房产 </a> </li>
+            <li>-</li>
+            <li> <a href="http://women.sohu.com/"> 女人 </a> </li>
+            <li>-</li>
+            <li> <a href="http://tv.sohu.com/"> 视频 </a> </li>
+            <li>-</li>
+            <li> <a href="http://my.tv.sohu.com/"> 播客 </a> </li>
+            <li>-</li>
+            <li> <a href="http://t.sohu.com/"> 微博 </a> </li>
+            <li>-</li>
+            <li> <a href="http://login.mail.sohu.com/"> 邮件 </a> </li>
+            <li>-</li>
+            <li> <a href="http://blog.sohu.com/"> 博客 </a> </li>
+            <li>-</li>
+            <li> <a href="http://club.sohu.com/"> BBS </a> </li>
+            <li>-</li>
+            <li> <a href="http://comment2.news.sohu.com/"> 我说两句 </a> </li>
+            <li>-</li>
+            <li class="end"> <a href="http://www.sogou.com/"> 搜狗 </a> </li>
+        </ul>
+    </div>
+</div>
+<!-- 页头，简版 (end) --> 
+<!--  
+	<img height="22" src="http://i3.itc.cn/20130721/2fd9_25b51cef_574c_2a9f_3374_cafd91fab001_1.gif" border="0" class="left">  -- 时尚
+    <img src="http://images.sohu.com/uiue/sohu_logo/2005/cul_logo2.gif" height="22" alt="搜狐文化" border="0" class="left">   -- 文化
+    <img src="http://images.sohu.com/uiue/sohu_logo/2006/news_logo2.gif" height="22" alt="搜狐新闻" border="0" class="left">  -- 新闻
+-->
+
+<p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</p>
+
+<!-- 页尾：白色 (start)  -->
+<div class="s-ft" id="s-ft-white">
+    <div class="s-ft-in"> <a href="javascript:void(0)" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.sohu.com');return" false;="">设置首页</a> - <a href="http://pinyin.sogou.com/" target="_blank" rel="nofollow">搜狗输入法</a> - <a href="http://up.sohu.com/" target="_blank" rel="nofollow">支付中心</a> - <a href="http://hr.sohu.com" target="_blank" rel="nofollow">搜狐招聘</a> - <a href="http://ad.sohu.com/" target="_blank" rel="nofollow">广告服务</a> - <a href="http://sohucallcenter.blog.sohu.com/" target="_blan" rel="nofollow" k="">客服中心</a> - <a href="http://corp.sohu.com/s2006/contactus/" target="_blank" rel="nofollow">联系方式</a> - <a href="http://www.sohu.com/about/privacy.html" target="_blank" rel="nofollow">保护隐私权</a> - <a href="http://investors.sohu.com/" target="_blank" rel="nofollow">About SOHU</a> - <a href="http://corp.sohu.com/indexcn.shtml" target="_blank" rel="nofollow">公司介绍</a> - <a href="http://sitemap.sohu.com/" target="_blank">网站地图</a> - <a href="http://roll.sohu.com/" target="_blank">全部新闻</a> - <a href="http://blog.sohu.com/roll" target="_blank">全部博文</a> <br>
+        Copyright <span class="fontArial">©</span> 2013 Sohu.com Inc. All Rights Reserved. 搜狐公司 <span class="unline"><a href="http://corp.sohu.com/s2007/copyright/" target="_blank" rel="nofollow">版权所有</a></span> <br>
+        搜狐不良信息举报电话：010－62728061 举报邮箱：<a href="mailto:jubao@contact.sohu.com">jubao@contact.sohu.com</a> </div>
+</div>
+<!-- 页尾：白色 (end)  -->
+
+<p>
+    <br />
+    <br />
+</p>
+
+<!-- 页尾：黑色 (start) -->
+<div class="s-ft" id="s-ft-black" collection="Y">
+    <div class="s-ft-in"> <a href="javascript:void(0)" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.sohu.com');return" false;=""> 设置首页 </a> - <a href="http://pinyin.sogou.com/" target="_blank" rel="nofollow"> 搜狗输入法 </a> - <a href="http://up.sohu.com/" target="_blank" rel="nofollow"> 支付中心 </a> - <a href="http://hr.sohu.com" target="_blank" rel="nofollow"> 搜狐招聘 </a> - <a href="http://ad.sohu.com/" target="_blank" rel="nofollow"> 广告服务 </a> - <a href="http://sohucallcenter.blog.sohu.com/" target="_blan" rel="nofollow" k=""> 客服中心 </a> - <a href="http://corp.sohu.com/s2006/contactus/" target="_blank" rel="nofollow"> 联系方式 </a> - <a href="http://www.sohu.com/about/privacy.html" target="_blank" rel="nofollow"> 保护隐私权 </a> - <a href="http://corp.sohu.com/" target="_blank" rel="nofollow"> About SOHU </a> - <a href="http://corp.sohu.com/indexcn.shtml" target="_blank" rel="nofollow"> 公司介绍 </a> - <a href="http://sitemap.sohu.com/" target="_blank"> 网站地图 </a> - <a href="http://roll.sohu.com/" target="_blank"> 全部新闻 </a> - <a href="http://blog.sohu.com/roll" target="_blank"> 全部博文 </a> <br>
+        Copyright <span class="fontArial">©</span> 2013 Sohu.com Inc. All Rights Reserved. 搜狐公司 <span class="unline"> <a href="http://corp.sohu.com/s2007/copyright/" target="_blank" rel="nofollow"> 版权所有 </a> </span> <br>
+        搜狐不良信息举报电话：010－62728061 举报邮箱： <a href="mailto:jubao@contact.sohu.com"> jubao@contact.sohu.com </a> </div>
+</div>
+<!-- 页尾：黑色(end) --> 
+</body>
+</html>

@@ -1,0 +1,7 @@
+1 紫色，兼容ie6
+	http://www.threestyles.com/CSS3-login-form.html?username=&password=&submit=Submit
+
+2 梦幻般的表单，动画
+	http://kaylarose.github.io/Glowform/
+
+http://bbs.html5cn.org/thread-2265-1-7.html
