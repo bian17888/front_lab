@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "20db";
+    src: url("../fonts/20db.otf");
+}
+
+body {
+	font:normal 12px/18px "20db";
+}
