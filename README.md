@@ -12,7 +12,8 @@
 ###### 3_develTools
 - 开发工具  
 	gulp  
-	各种库文件
+	各种库文件  
+	shell脚本
 
 ###### 4_myDocs
 - code_standards － 代码规范  
