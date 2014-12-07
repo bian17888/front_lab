@@ -1,0 +1,48 @@
+.popup
+	position fixed
+	left 0
+	top 0
+	display none
+	z-index 999
+	.popup-in
+		position fixed
+		left 50%
+		top 50%
+		z-index 999
+		.popup-cont
+			position relative
+			z-index 9
+	.popup-bg
+		position fixed
+		left 0 
+		top 0
+		display block
+		width 100%
+		height 100%
+		background-color #000
+		opacity 0.5
+		filter unquote('alpha(opacity=50)')
+		z-index 998
+
+// 提示用户升级浏览器
+.popup-browser
+	.popup-in
+		margin -275px 0 0 -460px
+		.popup-cont
+			.btn-link-close, .btn-link-download
+				position absolute
+				display block
+				z-index 99
+				background-color #fff
+				opacity 0.01
+				filter unquote('alpha(opacity=1)')
+			.btn-link-close
+				right 19px
+				top 21px
+				width 65px
+				height 60px
+			.btn-link-download
+				right 135px
+				bottom 100px
+				width 145px
+				height 55px

@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>判断浏览器版本</title>
+    <link rel="stylesheet" href="/resources/css/popup.css">
 </head>
 <body>
+    
+    <!-- 提示用户升级浏览器 (start) -->
+    <div class="popup popup-browser" style="display:block">
+        <div class="popup-in">
+            <div class="popup-cont">
+                <p><img src="/resources/images/pic_popup_browser_900x550.jpg" alt=""></p>
+                <a class="btn-link-close" href="#"></a>
+                <a class="btn-link-download" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"></a>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
+    </div>
+    <!-- 提示用户升级浏览器 (end) -->
     
     <script type="text/javascript">
         /* 判断浏览器版本 */ 
@@ -53,7 +67,7 @@
                 version = parseInt(version[1], 10);
                 version ? sys.ie = version : null;
                 if(version < 9){
-                    alert(version);
+                    // to do something
                 }
             }
         }
