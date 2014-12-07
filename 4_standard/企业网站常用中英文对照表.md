@@ -1,0 +1,96 @@
+### 企业网站常用中英文对照表
+- 门户网站 portals website
+- 网站导航 site map
+- 公司简介 profile / company profile / company
+- 公司设备 equipment
+- 公司荣誉 glories
+- 企业文化 culture
+- 产品展示 product
+- 资质认证 quality certification
+- 企业规模 scale
+- 营销网络 sales network
+- 组织机构 organization
+- 合作加盟 join in cooperation
+- 技术力量 technology
+- 经理致辞 manager`s oration
+- 发展历程 development history
+- 工程案例 engineering projects
+- 业务范围 business scope
+- 分支机构 branches
+- 供求信息 supply & demand
+- 经营理念 operation principle
+- 产品销售 sales
+- 联系我们 contact us
+- 信息发布 information
+- 返回首页 homepage
+- 产品定购 order
+- 分类浏览 browse by category
+- 电子商务 e-business
+- 公司实力 strength
+- 版权所有 copy right
+- 友情连结 hot link
+- 应用领域 application fields
+- 人力资源 human resource / hr
+- 领导致辞 leader`s oration
+- 企业资质 enterprise qualification
+- 行业新闻 trade news
+- 行业动态 trends
+- 客户留言 customer message
+- 客户服务 customer service
+- 新闻动态 news & trends
+- 公司名称 company name
+- 销售热线 sales hot-line
+- 联系人 contact person
+- 您的要求 your requirements
+- 建设中 in construction
+- 证书 certificate
+- 地址 address / add
+- 邮编 postal code zipcode
+- 电话 tel
+- 传真 fax
+- 产品名称 product name
+- 产品说明 description
+- 价格 price
+- 品牌 brand
+- 规格 specification
+- 尺寸 size
+- 生产厂家 manufacuturer
+- 型号 model
+- 产品标号 item no.
+- 技术指标 technique data
+- 产品描述 description
+- 产地 production place
+- 销售信息 sales information
+- 用途 application
+- 论坛 forum
+- 在线订购 on-line order
+- 招商 enterprise-establishing
+- 招标 bid inviting
+- 综述 general
+- 业绩 achievements
+- 招聘 join us
+- 求贤纳士 join us
+- 大事 great event
+- 动态 trends
+- 服务 service
+- 投资 investment
+- 行业 industry
+- 规划 programming
+- 环境 environment
+- 发送 delivery
+- 提交 submit
+- 重写 reset
+- 登录 enter
+- 注册 login
+- 某公司技术支持 powered by skydesign.cn(改成你自己的)
+- 社区 community
+- 业务介绍 business introduction
+- 在线调查 online inquiry / inquiry
+- 下载中心 download
+- 会员登陆 member entrance
+- 意见反馈 feedback
+- 常见问题 FAQ / Frequently Asked Questions
+- 中心概况 general profile
+- 教育培训 education & training
+- 游乐园 amusement park
+- 在线交流 online communication
