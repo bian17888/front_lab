@@ -1,0 +1,29 @@
+{
+  "name": "my-Bower",
+  "version": "0.0.1",
+  "authors": [
+    "bian17888 <bian17888@gmail.com>"
+  ],
+  "description": "first bower",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": {
+      "js": "src/static/js/lib{XXX}"
+    }
+  },
+  "dependencies": {
+    "jquery": "~1.11.2"
+  },
+  "devDependencies": {
+    "jquery-validation": "~1.13.1"
+  }
+}
