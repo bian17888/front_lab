@@ -21,9 +21,7 @@
     }
   },
   "dependencies": {
-    "jquery": "~1.11.2"
+    "bootstrap": "~3.3.4"
   },
-  "devDependencies": {
-    "jquery-validation": "~1.13.1"
-  }
+  "devDependencies": {}
 }

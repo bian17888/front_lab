@@ -12,6 +12,17 @@
   "author": "biankai",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-if": "^1.2.5",
+    "gulp-inject": "^1.2.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-print": "^1.1.0",
+    "gulp-stylus": "^2.0.3",
+    "gulp-util": "^3.0.5",
+    "wiredep": "^2.2.2",
+    "yargs": "^3.10.0"
   }
 }
