@@ -17,7 +17,9 @@
 module.exports = function () {
 
 	var clientStatic = './src/static/',
-		clientView = './src/view/';
+		clientView = './src/view/',
+		tmp = './tmp/',
+		server = tmp + 'server/';
 
 	var config = {
 		// index.html
@@ -31,14 +33,20 @@ module.exports = function () {
 		// page js
 		pagejs : clientStatic + 'js/page/**/*.js',
 		// output folder
-		tmp : './tmp',
+		tmp : tmp,
 
 		// bower config
 		bower : {
 			json : require('./bower.json'),
 			directory : './bower_components',
 			ignorePath : '../..'
-		}
+		},
+
+		// node config
+		defaultPort : 7203,
+		server : server,
+		nodeServer : server + 'app.js'
+
 	};
 
 	config.getWiredepDefaultOptions = function () {

@@ -1,0 +1,7 @@
+body {
+  background: #f00;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  color: #404040;
+}

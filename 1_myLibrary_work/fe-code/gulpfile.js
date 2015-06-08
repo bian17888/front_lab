@@ -16,17 +16,19 @@ var gulp = require('gulp'),
 	args = require('yargs').argv,
 	del = require('del'),
 	$wiredep = require('wiredep').stream,
+	browserSync = require('browser-sync').create(),
 	$ = require('gulp-load-plugins')({lazy: true});
 
 // gulp.js 配置文件
 var Gconfig = require('./gulp.config')();
 
+var port = process.env.NODE_ENV || Gconfig.defaultPort;
 
 /**
  * task : 检查文件
  */
 gulp.task('vet', function () {
-	log({status : 'success', message : 'Start to analyse the code ......'});
+	log({status: 'success', message: 'Start to analyse the code ......'});
 
 	return gulp
 		.src(Gconfig.alljs)
@@ -39,7 +41,7 @@ gulp.task('vet', function () {
  * task : css文件处理
  */
 gulp.task('styles', ['clean-css'], function () {
-	log({status : 'success', message : 'Compiling Stylus --> css'});
+	log({status: 'success', message: 'Compiling Stylus --> css'});
 
 	return gulp
 		.src(Gconfig.allstylus)
@@ -47,7 +49,7 @@ gulp.task('styles', ['clean-css'], function () {
 		.pipe($.stylus())
 		//.on('error', errorLogger)         // 用gulp-plumber 取代
 		.pipe($.autoprefixer())
-		.pipe(gulp.dest(Gconfig.tmp));
+		.pipe(gulp.dest(Gconfig.tmp))
 
 });
 
@@ -58,7 +60,7 @@ gulp.task('styles', ['clean-css'], function () {
 gulp.task('clean-css', function () {
 	var file = Gconfig.tmp + '/**/*.css';
 
-	log({status : 'success', message : 'Cleaning css :' + file});
+	log({status: 'success', message: 'Cleaning css :' + file});
 	del(file, cleanCssFinished);
 
 });
@@ -76,7 +78,7 @@ gulp.task('watcher-css', function () {
 /**
  * task : 库文件自动化载入机制
  */
-gulp.task('wiredep', function () {
+gulp.task('wiredep', ['styles'], function () {
 
 	var options = Gconfig.getWiredepDefaultOptions();
 
@@ -85,9 +87,46 @@ gulp.task('wiredep', function () {
 		.pipe($wiredep(options))
 		.pipe($.inject(gulp.src([Gconfig.pagecss, Gconfig.pagejs])))
 		.pipe(gulp.dest(Gconfig.tmp));
-
 });
 
+
+/**
+ * task : server dev
+ */
+gulp.task('server-dev', ['wiredep'], function () {
+	var isDev = true,
+		statusSuccess = 'success',
+		statusError = 'error',
+		statusNormal = 'normal';
+
+	var nodeOptions = {
+		script   : Gconfig.nodeServer,
+		delayTime: 1,
+		env      : {
+			'PORT'    : port,
+			'NODE_ENV': isDev ? 'dev' : 'build'
+		},
+		watch    : [Gconfig.server]
+	};
+	$.nodemon(nodeOptions)
+		.on('start', function () {
+			log({status: statusSuccess, message: '*** nodemon started'});
+			// 浏览器自动刷新
+			// fixme : 稍后做
+			//startBrowserSync();
+		})
+		.on('restart', function (ev) {
+			log({status: statusSuccess, message: '*** nodemon restarted'});
+			log({status: statusSuccess, message: 'files changed on restarted : \n' + ev});
+		})
+		.on('crash', function () {
+			log({status: statusError, message: '*** nodemon crashed : script crashed for some reason'});
+		})
+		.on('exit', function () {
+			log({status: statusNormal, message: '*** nodemon exited cleanly '});
+		});
+
+});
 
 /**
  * 日志方法
@@ -103,6 +142,44 @@ function log(options) {
 	} else {
 		$.util.log($.util.colors.blue(options.message));
 	}
+
+}
+
+
+/**
+ * 浏览器自动刷新
+ * @method startBrowserSync
+ * fixme : 目前不能浏览器同步, 稍后修复
+ */
+function startBrowserSync() {
+
+	if (browserSync.active) {
+		log({status: 'error', message: '==================== : ' + browserSync.active});
+		browserSync.reload();
+		return ;
+	}
+
+	log({status: 'success', message: 'Starting browser-sync on port : ' + port});
+
+
+	var options = {
+		proxy         : 'localhost:' + port,
+		port          : 3000,
+		files         : [Gconfig.tmp + '**/*.*'],
+		ghostMode     : {
+			clicks: true,
+			forms : true,
+			scroll: true
+		},
+		injectChanges : true,
+		logFileChanges: true,
+		logLevel      : "debug",
+		logPrefix     : "gulp-patterns",
+		notify        : true
+	};
+
+	browserSync.init(options);
+
 
 }
 

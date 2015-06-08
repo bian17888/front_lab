@@ -2,213 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1834e5-e1fc-4350-b2fe-a3b9ff8fdacd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/build/release.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/dist/additional-methods.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/dist/additional-methods.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/dist/jquery.validate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/dist/jquery.validate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/accept.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/additional.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/alphanumeric.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/bankaccountNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/bankorgiroaccountNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/bic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/cifES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/creditcardtypes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/currency.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/dateFA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/dateITA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/dateNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/extension.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/giroaccountNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/iban.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/integer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/ipv4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/ipv6.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/lettersonly.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/letterswithbasicpunc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/mobileNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/mobileUK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/nieES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/nifES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/nowhitespace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/pattern.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/phoneNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/phoneUK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/phoneUS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/phonesUK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/postalCodeCA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/postalcodeBR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/postalcodeIT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/postalcodeNL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/postcodeUK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/require_from_group.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/skip_or_fill_minimum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/statesUS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/strippedminlength.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/time.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/time12h.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/url2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/vinUS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/zipcodeUS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/additional/ziprange.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/delegate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_es_AR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_kk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_my.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_pt_BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_pt_PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_sr_lat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_tj.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/messages_zh_TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/methods_de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/methods_es_CL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/methods_fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/methods_nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/src/localization/methods_pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery-validation/validation.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/dist/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/dist/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/dist/jquery.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/jsonp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/load.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/parseJSON.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/parseXML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/var/nonce.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/var/rquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/ajax/xhr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes/attr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes/classes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes/prop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/attributes/val.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/callbacks.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core/access.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core/init.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core/parseHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core/ready.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/core/var/rsingleTag.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/addGetHookIf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/curCSS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/defaultDisplay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/hiddenVisibleSelectors.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/swap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/var/cssExpand.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/var/isHidden.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/var/rmargin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/css/var/rnumnonpx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/data/accepts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/data/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/deferred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/deprecated.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/dimensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/effects.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/effects/Tween.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/effects/animatedSelector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/effects/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/event.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/event/ajax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/event/alias.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/event/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/exports/amd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/exports/global.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/manipulation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/manipulation/_evalUrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/manipulation/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/manipulation/var/rcheckableType.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/offset.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/outro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/queue/delay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/selector-sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/selector.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/serialize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/sizzle/dist/sizzle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/sizzle/dist/sizzle.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/sizzle/dist/sizzle.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/traversing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/traversing/findFilter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/traversing/var/rneedsContext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/class2type.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/deletedIds.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/hasOwn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/indexOf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/pnum.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/push.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/rnotwhite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/slice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/strundefined.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/support.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/var/toString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/static/js/lib/jquery/src/wrap.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/static/css/all.styl" afterPath="$PROJECT_DIR$/src/static/css/all.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp.config.js" afterPath="$PROJECT_DIR$/gulp.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/static/css/page/index/index.css" afterPath="$PROJECT_DIR$/src/static/css/page/index/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -234,40 +31,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1674">
-              <caret line="78" column="18" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.60117877" vertical-offset="1818" max-vertical-offset="2394">
+              <caret line="194" column="3" selection-start-line="194" selection-start-column="3" selection-end-line="194" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#423#587#0" expanded="false" />
-                <element signature="e#665#933#0" expanded="false" />
-                <element signature="e#1002#1139#0" expanded="false" />
-                <element signature="e#1214#1264#0" expanded="false" />
+                <element signature="e#528#690#0" expanded="false" />
+                <element signature="e#768#1033#0" expanded="false" />
+                <element signature="e#1102#1237#0" expanded="false" />
+                <element signature="e#1312#1362#0" expanded="false" />
+                <element signature="e#1441#1654#0" expanded="false" />
                 <element signature="n#!!block;n#log#0" expanded="false" />
-                <element signature="n#!!block;n#cleanCssFinished#0" expanded="false" />
+                <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tmp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="540">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".bowerrc" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.bowerrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1433121" vertical-offset="0" max-vertical-offset="628">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -275,8 +63,8 @@
       <file leaf-file-name="gulp.config.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulp.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="1062">
-              <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="1206">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -287,18 +75,8 @@
       <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="594">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="612">
-              <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="594">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -315,18 +93,20 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/tmp/component/test.css" />
         <option value="$PROJECT_DIR$/src/static/css/component/test.stylus" />
-        <option value="$PROJECT_DIR$/src/static/css/all.styl" />
         <option value="$PROJECT_DIR$/tmp/all.css" />
         <option value="$PROJECT_DIR$/src/static/css/component/test.styl" />
         <option value="$PROJECT_DIR$/src/static/js/page/index/index.js" />
-        <option value="$PROJECT_DIR$/src/static/css/page/index/index.css" />
         <option value="$PROJECT_DIR$/src/view/index.html" />
-        <option value="$PROJECT_DIR$/gulp.config.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/bower_components/.bowerrc" />
         <option value="$PROJECT_DIR$/.bowerrc" />
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/tmp/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/static/css/page/index/index.css" />
+        <option value="$PROJECT_DIR$/gulp.config.js" />
+        <option value="$PROJECT_DIR$/src/static/css/all.styl" />
+        <option value="$PROJECT_DIR$/tmp/server/app.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -337,7 +117,7 @@
     <option name="x" value="-243" />
     <option name="y" value="-1057" />
     <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -394,6 +174,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fe-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fe-code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -403,11 +201,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSHint" />
+    <property name="options.lastSelected" value="preferences.toDoOptions" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="SearchEverywhereHistoryKey" value="todo&#9;ACTION&#9;ActivateTODOToolWindow" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -415,10 +214,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -426,10 +229,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -468,29 +267,69 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-243" y="-1057" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <frame x="-243" y="-1057" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.289282" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44248706" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32892805" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18446602" sideWeight="0.49842766" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.6210692" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12473348" sideWeight="0.6210692" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1968" sideWeight="0.3789308" order="1" side_tool="false" content_ui="tabs" x="-63" y="-666" width="429" height="311" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4684288" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1968" sideWeight="0.3789308" order="1" side_tool="false" content_ui="tabs" x="-63" y="-666" width="429" height="311" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18446602" sideWeight="0.49842766" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14724919" sideWeight="0.6210692" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -516,18 +355,231 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="702">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="324">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1206">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="594">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="702">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="2520">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="35" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="668" max-vertical-offset="1206">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="594">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="702">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="342">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1206">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="594">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="702">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="342">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2736">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1206">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="594">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="684">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1674">
           <caret line="78" column="18" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#423#587#0" expanded="false" />
-            <element signature="e#665#933#0" expanded="false" />
-            <element signature="e#1002#1139#0" expanded="false" />
-            <element signature="e#1214#1264#0" expanded="false" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
             <element signature="n#!!block;n#log#0" expanded="false" />
-            <element signature="n#!!block;n#cleanCssFinished#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -536,7 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="540">
           <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +595,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="1062">
+          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="594">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="612">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1674">
+          <caret line="78" column="18" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="540">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -580,12 +687,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#423#587#0" expanded="false" />
-            <element signature="e#665#933#0" expanded="false" />
-            <element signature="e#1002#1139#0" expanded="false" />
-            <element signature="e#1214#1264#0" expanded="false" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
             <element signature="n#!!block;n#log#0" expanded="false" />
-            <element signature="n#!!block;n#cleanCssFinished#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -619,14 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34615386" vertical-offset="0" max-vertical-offset="1134">
           <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/css/all.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02852615" vertical-offset="0" max-vertical-offset="631">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -637,25 +737,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="612">
-          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/static/js/page/index/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08231708" vertical-offset="0" max-vertical-offset="656">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/static/css/page/index/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -666,53 +751,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1674">
-          <caret line="78" column="18" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#423#587#0" expanded="false" />
-            <element signature="e#665#933#0" expanded="false" />
-            <element signature="e#1002#1139#0" expanded="false" />
-            <element signature="e#1214#1264#0" expanded="false" />
-            <element signature="n#!!block;n#log#0" expanded="false" />
-            <element signature="n#!!block;n#cleanCssFinished#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="594">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="262" max-vertical-offset="1062">
-          <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.20979021" vertical-offset="0" max-vertical-offset="429">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tmp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="540">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.67132866" vertical-offset="0" max-vertical-offset="540">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/css/page/index/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="447">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/static/css/all.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037190083" vertical-offset="0" max-vertical-offset="484">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="643" max-vertical-offset="1206">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20910972" vertical-offset="187" max-vertical-offset="702">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.bowerrc">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1433121" vertical-offset="0" max-vertical-offset="628">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state vertical-scroll-proportion="-17.307692" vertical-offset="0" max-vertical-offset="594">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/browser-sync/lib/sockets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36245954" vertical-offset="676" max-vertical-offset="1620">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60117877" vertical-offset="1818" max-vertical-offset="2394">
+          <caret line="194" column="3" selection-start-line="194" selection-start-column="3" selection-end-line="194" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#528#690#0" expanded="false" />
+            <element signature="e#768#1033#0" expanded="false" />
+            <element signature="e#1102#1237#0" expanded="false" />
+            <element signature="e#1312#1362#0" expanded="false" />
+            <element signature="e#1441#1654#0" expanded="false" />
+            <element signature="n#!!block;n#log#0" expanded="false" />
+            <element signature="n#!!block;n#startBrowserSync#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
