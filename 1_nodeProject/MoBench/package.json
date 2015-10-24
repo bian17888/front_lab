@@ -1,0 +1,36 @@
+{
+  "name": "MoBench",
+  "version": "0.0.1",
+  "description": "Alibench-MoBench",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "test": "./node_modules/mocha/bin/mocha --harmony-generators -u bdd -R spec"
+  },
+  "keywords": [
+    "koa",
+    "vote",
+    "poll",
+    "mongodb"
+  ],
+  "author": "zhuzhen zhuzhen.bk@alibaba-inc.com",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "supertest": "~0.13.0",
+    "co": "~3.1.0",
+    "should": "~4.0.4"
+  },
+  "dependencies": {
+    "bluebird": "~2.3.10",
+    "co-body": "~1.0.0",
+    "co-monk": "~1.0.0",
+    "co-views": "~0.2.0",
+    "koa": "~0.10.0",
+    "koa-route": "~2.0.0",
+    "koa-static": "~1.4.7",
+    "monk": "~0.9.0",
+    "superagent": "^1.4.0",
+    "swig": "~1.4.2"
+  }
+}
