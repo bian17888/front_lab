@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网页的Title标题文字倒序显示，欢迎访问XXXXX特效代码，我们的网址是：www.sohu.com</title>
+</head>
+<body bgcolor="#ffffff" onload="newtext()">
+<script language=javascript >
+var text=document.title
+var timerID
+function newtext() {
+clearTimeout(timerID)
+document.title=text.substring(1,text.length)+text.substring(0,1)
+text=document.title.substring(0,text.length)
+timerID = setTimeout("newtext()", 500)
+}
+</script>
+</body>
+</html>

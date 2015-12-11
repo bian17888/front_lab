@@ -1,9 +1,13 @@
-## 文档模板
+## 需求 原型 设计 代码
 #### 包含
-- null
+- psd
+- prototype
+- html
+- log
 
 #### 未来
-- null
+- 单元测试
+- karma 测试 (命令行 + html 页面)
 
 
 ## Quick Start
@@ -14,3 +18,7 @@ $ npm install
 $ bower install
 $ npm start
 ```
+
+
+## Gulp 任务说明
+- gulp gulp-help
