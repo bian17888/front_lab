@@ -8,7 +8,7 @@
 ```/* === 单个样式 === */
 ```###### 单个样式
 ```/* 单个样式 */
-```					### 三、文件命名参考- 主要的		: master.css  
+```					### 三、文件命名参考- reset		: reset.css - 主要的		: master.css  
 - 模块		: module.css  
 - 基本共用 	: base.css  
 - 布局，版面	: layout.css  
