@@ -4,11 +4,11 @@
 **/source/*
 !**/source/*.zip
 
-### 1_多页_static ###
-1_init/1_多页_static/**/node_modules/
-1_init/1_多页_static/www/src/lib/
-1_init/1_多页_static/www/dist/
-1_init/1_多页_static/www-build/
+### 2_mpa_requirejs (多页静态应用) ###
+1_init/2_mpa_requirejs/**/node_modules/
+1_init/2_mpa_requirejs/www/src/lib/
+1_init/2_mpa_requirejs/www/dist/
+1_init/2_mpa_requirejs/www-build/
 
 
 ### WebStorm ###
