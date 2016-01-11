@@ -1,8 +1,15 @@
 # Created by https://www.gitignore.io
 
-### 自定义 : Github 忽略各 xx/source/*, 只保留.zip 压缩文件 ###
-# **/source/*
-# !**/source/*.zip
+########## 自定义 : Github 忽略各 xx/source/*, 只保留.zip 压缩文件 ##########
+**/source/*
+!**/source/*.zip
+
+### 1_多页_static ###
+1_init/1_多页_static/**/node_modules/
+1_init/1_多页_static/www/src/lib/
+1_init/1_多页_static/www/dist/
+1_init/1_多页_static/www-build/
+
 
 ### WebStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
@@ -10,7 +17,7 @@
 *.iml
 
 ## Directory-based project format:
-.idea/
+.idea
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
@@ -80,16 +87,16 @@ build/Release
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-#node_modules
+node_modules
 
 
 # Created by https://www.gitignore.io/api/bower
 
 ### Bower ###
-#bower_components
-#.bower-cache
-#.bower-registry
-#.bower-tmp
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
 
 ### SublimeText ###
 # cache files for sublime text
