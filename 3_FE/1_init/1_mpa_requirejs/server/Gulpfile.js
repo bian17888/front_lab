@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({
 	lazy: true
 });
+var args = require('yargs').argv;
 var del = require('del');
 var rjs = require('requirejs');
 var browserSync = require('browser-sync').create();
@@ -13,6 +14,21 @@ var port = config.defaultPort;
  */
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
+/**
+ * task vet : 语法检测
+ */
+gulp.task('vet', function () {
+	var jscs = require('gulp-jscs');
+
+	log('Analyzing source with JSHint and JSCS');
+	return gulp
+		.src(config.alljs)
+		.pipe($.if(args.verbose, $.print()))
+		.pipe($.jshint())
+		.pipe(jscs())
+		.pipe($.jshint.reporter('jshint-stylish'))
+		.pipe($.jshint.reporter('fail'));
+});
 
 /**
  * task serve-dev : start server in 'dev' environment

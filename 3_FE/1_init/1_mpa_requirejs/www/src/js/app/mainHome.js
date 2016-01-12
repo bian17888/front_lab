@@ -15,10 +15,11 @@ define(['utils'], function (utils) {
 		 */
 		function init() {
 			bindEvent();
-		};
+		}
+
 		function bindEvent() {
 			$('.home-wrap')
-				.on('click', '.r-btn-close', xxFn)
+				.on('click', '.r-btn-close', xxFn);
 		}
 
 		/**
@@ -29,5 +30,5 @@ define(['utils'], function (utils) {
 			// to do some thing
 		}
 
-	})
-})
+	});
+});

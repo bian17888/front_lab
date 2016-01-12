@@ -21,6 +21,7 @@ module.exports = function () {
 		html         : dist + '**/*.html',
 		stylus       : src + 'css/**/*.styl',
 		css          : dist + 'css/**/*.css',
+		alljs        : src + 'js/**/*.js',
 		images       : src + 'images/**/*.*',
 		fonts        : [
 			src + 'lib/font-awesome/fonts/**/*.*',
@@ -85,7 +86,7 @@ module.exports = function () {
 		 * gulp settings
 		 */
 		defaultPort: 3000
-	}
+	};
 
 	/**
 	 * getWiredepDefaultOptions : 获取 wiredep 默认设置
@@ -98,8 +99,8 @@ module.exports = function () {
 		//    ignorePath: config.bower.ignorePath
 		//};
 		//return options;
-	}
+	};
 
 	return config;
 
-}
+};
