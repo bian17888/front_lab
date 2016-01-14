@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block js %}
+    <script data-main="js/page/home" src="lib/requirejs/require.js"></script>
+{% endblock %}
+
+{% block bodyClass %}home-wrap{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>home page !</h2>
+        <p><a href="/login.html"> >> login page </a></p>
+    </div>
+{% endblock %}

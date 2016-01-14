@@ -1,0 +1,53 @@
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 999;
+}
+.popup .popup-in {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 999;
+}
+.popup .popup-in .popup-cont {
+  position: relative;
+  z-index: 9;
+}
+.popup .popup-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 998;
+}
+.popup-browser .popup-in {
+  margin: -275px 0 0 -460px;
+}
+.popup-browser .popup-in .popup-cont .btn-link-close,
+.popup-browser .popup-in .popup-cont .btn-link-download {
+  position: absolute;
+  display: block;
+  z-index: 99;
+  background-color: #fff;
+  opacity: 0.01;
+  filter: alpha(opacity=1);
+}
+.popup-browser .popup-in .popup-cont .btn-link-close {
+  right: 19px;
+  top: 21px;
+  width: 65px;
+  height: 60px;
+}
+.popup-browser .popup-in .popup-cont .btn-link-download {
+  right: 135px;
+  bottom: 100px;
+  width: 145px;
+  height: 55px;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "MoBench",
+  "description": "Alibench-MoBench",
+  "main": "app.js",
+  "authors": [
+    "zhuzhen zhuzhen.bk@alibaba-inc.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "koa",
+    "vote",
+    "poll",
+    "mongodb"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery-validation": "jquery-validate#~1.14.0"
+  }
+}

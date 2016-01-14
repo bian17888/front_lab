@@ -14,3 +14,6 @@ $ npm install
 $ bower install
 $ npm start
 ```
+
+easing  
+html5.js

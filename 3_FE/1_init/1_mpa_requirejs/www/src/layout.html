@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}多页应用 mini-demo {% endblock %}</title>
+    {% block css %}
+		<link rel="stylesheet" href="css/common/lib.css">
+        <link rel="stylesheet" href="css/pages/page.css">
+    {% endblock %}
+</head>
+<body class={% block bodyClass %}box-wrap{% endblock %}>
+
+{% block navMain %}
+    {# 顶部导航 #}
+    <nav class="navbar navbar-default">导航区</nav>
+{% endblock %}
+
+{% block content %}
+    <section class="container">内容区</section>
+{% endblock %}
+
+{% block footer %}
+    <footer>页尾区</footer>
+{% endblock %}
+
+</body>
+    {% block js %}
+        <script src="libs/requirejs/require.js"></script>
+    {% endblock %}
+</html>
