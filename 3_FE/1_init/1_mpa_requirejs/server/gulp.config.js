@@ -68,7 +68,17 @@
           }
         ]
       },
-      jsdoc : root + 'docs/',
+      jsdoc: root + 'docs/',
+      /**
+       * Shell
+       */
+      shell: {
+        jsdoc: 'jsdoc -c jsdoc.config.json'
+      },
+      /**
+       * gulp settings
+       */
+      defaultPort: 3000
       /**
        * browser sync
        */
@@ -86,11 +96,6 @@
       //    './package.json',
       //    './bower.json'
       //],
-
-      /**
-       * gulp settings
-       */
-      defaultPort: 3000
     };
 
     /**

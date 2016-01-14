@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var exec = require('child_process').exec;
 var $ = require('gulp-load-plugins')({
   lazy: true
 });
@@ -6,16 +7,21 @@ var args = require('yargs').argv;
 var del = require('del');
 var rjs = require('requirejs');
 var browserSync = require('browser-sync').create();
+
 var config = require('./gulp.config')();
 var port = config.defaultPort;
 
 /**
  * start
  */
-gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
-gulp.task('jsdoc', ['clean-jsdoc'], function() {
-  // todo : shell -> jsdoc
+gulp.task('help', $.taskListing);
+gulp.task('jsdoc', ['clean-jsdoc'], function(cb){
+  exec(config.shell.jsdoc, function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
 });
 
 /**
@@ -218,7 +224,6 @@ function log(msg) {
 /**
  * clean 删除文件
  * @param path
- * @param done, tolight : 回调函数 (重点!!, 异步中, 防止未删除完就执行其他动作)
  */
 function clean(path) {
   log("Cleaning: " + $.util.colors.blue(path));
