@@ -1,19 +1,23 @@
 /**
- * 项目初始化模块
- * 包含 : 库文件, 初始化视频插件, 验证插件, 顶部导航等
+ * @fileOverview 项目初始化
+ * @author bian17888
  */
-//Load common code that includes config, then load the app logic for this page.
 (function() {
 
   'use strict';
 
-  define(['jquery', 'underscore', 'validate', 'jquery.ui'], function($, _) {
+  /**
+   * 初始化 :
+   * 包含 库文件, 初始化视频插件, 验证插件, 顶部导航等
+   * @module common/init
+   */
+  define('common/init',['jquery', 'underscore', 'validate', 'jquery.ui'], function($, _) {
 
-    // 项目初始化
     init();
 
     /**
-     * 初始化页面, 加载所需框架 + 各配置参数
+     * @func init
+     * @desc 初始化页面, 加载所需框架 + 各配置参数
      */
     function init() {
       // jquery validate 配置参数
@@ -22,7 +26,8 @@
     }
 
     /**
-     * 初始化 jQuery validate 组件
+     * @func initValidate
+     * @desc 初始化 jQuery validate 组件
      */
     function initValidate() {
       jQuery.extend(jQuery.validator.messages, {
@@ -54,7 +59,8 @@
     }
 
     /**
-     * 初始化 MediaElement 组件
+     * @func initMediaElement
+     * @desc 初始化 MediaElement 组件
      */
     function initMediaElement() {
       $('video,audio').mediaelementplayer({});

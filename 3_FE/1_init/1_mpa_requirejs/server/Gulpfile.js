@@ -14,6 +14,10 @@ var port = config.defaultPort;
  */
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
+gulp.task('jsdoc', ['clean-jsdoc'], function() {
+  // todo : shell -> jsdoc
+});
+
 /**
  * task vet : 语法检测
  */
@@ -147,6 +151,9 @@ gulp.task('clean-images', function() {
 });
 gulp.task('clean-fonts', function() {
   clean(config.dist + 'fonts/**/*');
+});
+gulp.task('clean-jsdoc', function() {
+  clean(config.jsdoc);
 });
 gulp.task('clean', function() {
   var delconfig = [].concat(config.dist, config.build);

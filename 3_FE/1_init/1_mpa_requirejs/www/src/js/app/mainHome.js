@@ -1,32 +1,44 @@
 /**
- * Created by bian17888 on 16/1/4.
+ * @fileOverview 首页
+ * @author bian17888
  */
 
 (function() {
 
   'use strict';
 
-  define(['utils'], function() {
+  /**
+   * 首页
+   * @module home
+   * @see module:common/utils
+   */
+  define('home', ['utils'], function() {
 
     $(function() {
 
       init();
 
       /**
-       * 初始化页面
+       * @func init
+       * @desc 本页面初始化
        */
       function init() {
         bindEvent();
       }
 
+      /**
+       * @func bindEvent
+       * @desc 本页面事件绑定
+       */
       function bindEvent() {
         $('.home-wrap')
           .on('click', '.r-btn-close', xxFn);
       }
 
       /**
-       * xxFn
-       * @param params
+       * @func xxFn
+       * @desc xxFn 描述
+       * @param {Object} params - 参数描述
        */
       function xxFn(params) {
         // to do some thing

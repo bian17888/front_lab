@@ -14,6 +14,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jscs": "^3.0.2",
+    "gulp-jsdoc": "^0.1.5",
     "gulp-jshint": "^2.0.0",
     "gulp-load-plugins": "^1.1.0",
     "gulp-plumber": "^1.0.1",

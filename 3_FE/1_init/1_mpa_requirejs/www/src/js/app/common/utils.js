@@ -1,17 +1,24 @@
 /**
- * Created by bian17888 on 15/10/22.
+ * @fileOverview 工具类
+ * @author bian17888
  */
 (function() {
 
   'use strict';
 
-  define(['init'], function() {
+  /**
+   * 工具类模块 :
+   * 包含封装的 ajax方法, tip 弹窗.
+   * @module common/utils
+   * @see module:common/init
+   */
+  define('common/init', ['init'], function() {
 
     /**
-     * 通用 ajax 方法
-     * @param params
-     * @param fnOk
-     * @constructor
+     * @func gbAjax
+     * @desc 通用 ajax 方法.
+     * @param {Object} params - ajax configs
+     * @param {function} fnOk - success回调函数
      */
     function gbAjax(params, fnOk) {
       $.ajax({
@@ -37,8 +44,10 @@
     }
 
     /**
-     * 顶部 Tip 弹窗 : 用于提示错误信息
-     * @params className, 弹窗类型(error-tip. success-tip)
+     * @func infoTip
+     * @desc 顶部 Tip 弹窗 : 用于提示错误信息
+     * @param {string} className -  弹窗类型(error-tip. success-tip)
+     * @param {string} msg - 弹窗信息
      */
     function infoTip(className, msg) {
       var dom = '<div class="' + className + '"></div>',
@@ -55,9 +64,6 @@
       }, 3000);
     }
 
-    /**
-     * 导出模块
-     */
     return {
       gbAjax: gbAjax,
       infoTip: infoTip

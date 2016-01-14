@@ -68,6 +68,7 @@
           }
         ]
       },
+      jsdoc : root + 'docs/',
       /**
        * browser sync
        */

@@ -6,9 +6,13 @@
 
 ### 2_mpa_requirejs (多页静态应用) ###
 **/1_mpa_requirejs/**/node_modules/
+**/1_mpa_requirejs/www/docs/
 **/1_mpa_requirejs/www/src/lib/
 **/1_mpa_requirejs/www/dist/
 **/1_mpa_requirejs/www-build/
+
+/Users/bian17888/project/front_lab
+
 
 
 ### WebStorm ###
