@@ -12,7 +12,7 @@
    * @module login
    * @see module:common/utils
    */
-  define('login', ['utils'], function() {
+  define(['utils'], function() {
 
     $(function() {
 
