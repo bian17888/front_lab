@@ -11,7 +11,7 @@
    * 包含 库文件, 初始化视频插件, 验证插件, 顶部导航等
    * @module common/init
    */
-  define('common/init',['jquery', 'underscore', 'validate', 'jquery.ui'], function($, _) {
+  define(['jquery', 'underscore', 'validate', 'jquery.ui'], function($, _) {
 
     init();
 

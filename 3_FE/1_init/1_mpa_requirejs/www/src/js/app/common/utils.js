@@ -12,7 +12,7 @@
    * @module common/utils
    * @see module:common/init
    */
-  define('common/init', ['init'], function() {
+  define(['init'], function() {
 
     /**
      * @func gbAjax

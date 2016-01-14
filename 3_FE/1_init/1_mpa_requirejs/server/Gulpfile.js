@@ -1,3 +1,12 @@
+/**
+ * 用于 mock server
+ */
+var fs = require('fs');
+var url = require('url');
+
+/**
+ * gulp 插件
+ */
 var gulp = require('gulp');
 var exec = require('child_process').exec;
 var $ = require('gulp-load-plugins')({
@@ -7,7 +16,6 @@ var args = require('yargs').argv;
 var del = require('del');
 var rjs = require('requirejs');
 var browserSync = require('browser-sync').create();
-
 var config = require('./gulp.config')();
 var port = config.defaultPort;
 
@@ -16,8 +24,8 @@ var port = config.defaultPort;
  */
 gulp.task('default', ['help']);
 gulp.task('help', $.taskListing);
-gulp.task('jsdoc', ['clean-jsdoc'], function(cb){
-  exec(config.shell.jsdoc, function (err, stdout, stderr) {
+gulp.task('jsdoc', ['clean-jsdoc'], function(cb) {
+  exec(config.shell.jsdoc, function(err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -182,9 +190,11 @@ function serve(isDev) {
   }
   log('Starting browser-sync on port ' + port);
 
+  // browserSync options
   var options = {
     server: {
-      baseDir: isDev ? config.dist : config.build
+      baseDir: isDev ? config.dist : config.build,
+      middleware: mockServer  // mock server
     },
     port: port,
     files: isDev ? [config.dist + '**/*.*'] : [],
@@ -201,8 +211,26 @@ function serve(isDev) {
     notify: true,
     reloadDelay: 500
   };
-
   browserSync.init(options);
+}
+
+/**
+ * @func mockServer
+ * @desc 拦截 ajax 请求, 返回data/*.json 数据
+ * @param {Object} req
+ * @param {Object} res
+ * @param {function} next
+ */
+function mockServer (req, res, next) {
+  var path = url.parse(req.url).pathname;
+  var isMock = path.indexOf('.') === 0 ? true : false ;
+  
+  if (isMock) {
+    var data = fs.readFileSync(config.src + 'data' + path + '.json', 'utf8');
+    res.setHeader("Content-Type", "application/json");
+    res.end(data);
+  }
+  next();
 }
 
 /**
