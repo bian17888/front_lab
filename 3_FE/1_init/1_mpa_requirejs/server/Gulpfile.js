@@ -170,7 +170,7 @@ gulp.task('clean-jsdoc', function() {
   clean(config.jsdoc);
 });
 gulp.task('clean', function() {
-  var delconfig = [].concat(config.dist, config.build);
+  var delconfig = [].concat(config.dist, config.build, config.jsdoc);
   log('Cleaning : ' + $.util.colors.blue(delconfig));
   del.sync(delconfig, {force: true});
 });
@@ -179,10 +179,7 @@ gulp.task('clean', function() {
 /**
  * serve : 开发环境 与 生产环境 server
  * @param isDev, true -> 开发环境
- * @returns {*}
  */
-// tolight : 此处架构思想多理解下
-// tolight : build 环境, 只更新 client 下文件 (静态文件); 关联 startBrowserSync 下的 options 下的 files = []
 function serve(isDev) {
 
   if (browserSync.active) {
@@ -223,12 +220,27 @@ function serve(isDev) {
  */
 function mockServer (req, res, next) {
   var path = url.parse(req.url).pathname;
-  var isMock = path.indexOf('.') === 0 ? true : false ;
-  
+  // tolight : 目前为/api/xx 路径的假数据, 这块可根据具体接口定义, 进行相应的过滤条件修改, 可扩展为正则过滤
+  var isMock = path.indexOf('/api/') === 0 ? true : false ;
   if (isMock) {
+
+    // 捕获异常
+    try {
     var data = fs.readFileSync(config.src + 'data' + path + '.json', 'utf8');
     res.setHeader("Content-Type", "application/json");
     res.end(data);
+    } catch (e){
+      var data = {
+        "status" : 99,
+        "data" : {},
+        "message" : 'data' + path + '.json' + '文件不存在!'
+      };
+      res.setHeader("Content-Type", "application/json");
+      res.end(JSON.stringify(data));
+      // 再次抛出异常, 以便测试可以检测到
+      throw new Error(e);
+    }
+
   }
   next();
 }

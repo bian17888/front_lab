@@ -7,9 +7,19 @@
 {% block bodyClass %}home-wrap{% endblock %}
 
 {% block content %}
+    {% include "data/page/_index.html" %}
     <div class="container">
         <h2>home page !</h2>
         <p><a href="/login.html"> >> login page </a></p>
+
+        <h3>ajax 获取假数据数据 demo</h3>
         <p><a id="test_mock" href="###"> mock alert </a></p>
+
+        <h3>页面渲染假数据数据 demo</h3>
+        <ul>
+            {% for val in books %}
+            <li>图书名称 : {{ val.title }} <br/> 作者 : {{ val.author }}</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

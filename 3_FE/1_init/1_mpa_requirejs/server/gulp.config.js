@@ -21,7 +21,10 @@
       /**
        * Files paths
        */
-      htmltemplates: src + '**/*.html',
+      htmltemplates: [
+        src + '**/*.html',
+        '!' + src + 'data/**/*.html'
+      ],
       html: dist + '**/*.html',
       stylus: src + 'css/**/*.styl',
       css: dist + 'css/**/*.css',

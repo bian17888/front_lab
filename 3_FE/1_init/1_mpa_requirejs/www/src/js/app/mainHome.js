@@ -37,14 +37,13 @@
        * @desc 测试 ajax mock 数据
        */
       function testMock() {
-        console.log(123);
         var params = {
           type : 'post',
           url : 'api/index',
           data : {name : 'home page'}
         };
         utils.gbAjax(params, function(data){
-          console.log(data.status);
+          console.log(data.message);
         });
       }
 
