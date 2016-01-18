@@ -29,6 +29,7 @@
     "gulp-util": "^2.2.20",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
+    "require-dir": "^0.3.0",
     "requirejs": "^2.1.22",
     "yargs": "^3.31.0"
   },
