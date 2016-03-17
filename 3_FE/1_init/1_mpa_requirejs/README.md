@@ -13,6 +13,7 @@
 	- ajax假数据
 - Mock server
 	- swig页面渲染假数据 ( 目前通过 swig 中定义 set实现 )
+		- `注意 : ` {% include %} 必须包在某 {% block %} 内
 	- ajax 异步获取假数据
 
 #### 未来
