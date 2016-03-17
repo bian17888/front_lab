@@ -20,10 +20,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(compress());
-//app.use(logger('dev'));
+app.use(logger('dev'));
 app.use(cors());
 app.use(errorHandler.init);
-
 
 routes = require('./routes/index')(app);
 
