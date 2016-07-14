@@ -17,7 +17,7 @@
       /* 'blocks.exception', 'blocks.logger', 'blocks.router', */
 
       /* 3rd-party modules */
-      'ngplus'
+      'ngplus', 'ui.bootstrap'
     ])
 
 })();
