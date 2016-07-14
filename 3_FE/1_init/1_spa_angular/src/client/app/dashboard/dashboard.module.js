@@ -1,5 +1,12 @@
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/31 20:10
+ */
 
-    angular.module('app.dashboard', []);
+(function() {
+
+  'use strict';
+
+  angular.module('app.dashboard', []);
+
 })();

@@ -11,11 +11,13 @@
 # 	忽略 xx/source/*, 保留xx/source/*.zip
 ##################################################
 
+**/.idea/
 **/source/*
 !**/source/*.zip
 **/bower_components/
 **/node_modules/
-**/.idea/
+**/build/
+**/_tmp/
 
 ### 2_mpa_requirejs (多页静态应用) ###
 **/1_mpa_requirejs/**/node_modules/

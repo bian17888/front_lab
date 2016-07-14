@@ -1,8 +1,15 @@
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/1 09:50
+ */
 
-    angular.module('blocks.router', [
-        'ngRoute',
-        'blocks.logger'
+(function() {
+  'use strict';
+
+  angular
+    .module('blocks.router', [
+      'ngRoute',
+      'blocks.logger'
     ]);
+
 })();

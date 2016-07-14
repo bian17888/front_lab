@@ -1,5 +1,12 @@
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/11 21:34
+ */
 
-    angular.module('app.layout', []);
+(function() {
+
+  'use strict';
+
+  angular.module('app.layout',[]);
+
 })();

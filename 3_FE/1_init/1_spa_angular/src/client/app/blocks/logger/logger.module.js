@@ -1,5 +1,11 @@
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/31 14:04
+ */
 
-    angular.module('blocks.logger', []);
+(function() {
+  'use strict';
+
+  angular.module('blocks.logger', []);
+
 })();

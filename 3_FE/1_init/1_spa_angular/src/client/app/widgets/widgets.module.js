@@ -1,5 +1,12 @@
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/1 09:33
+ */
 
-    angular.module('app.widgets', []);
+(function() {
+
+  'use strict';
+
+  angular.module('app.widgets',[]);
+
 })();

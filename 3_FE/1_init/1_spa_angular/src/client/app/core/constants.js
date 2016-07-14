@@ -1,9 +1,15 @@
-/* global toastr:false, moment:false */
-(function() {
-    'use strict';
+/**
+ * @fileOverview
+ * @author bian17888 16/5/1 09:23
+ */
 
-    angular
-        .module('app.core')
-        .constant('toastr', toastr)
-        .constant('moment', moment);
+(function() {
+
+  'use strict';
+
+  angular
+    .module('app.core')
+    .constant('toastr', toastr)
+    .constant('moment', moment);
+
 })();

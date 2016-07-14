@@ -1,21 +1,28 @@
+/**
+ * @fileOverview
+ * @author bian17888 16/7/14 10:09
+ */
+
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('blocks.exception')
-        .factory('exception', exception);
+  angular
+    .module('blocks.exception')
+    .factory('exception', exception);
 
-    /* @ngInject */
-    function exception(logger) {
-        var service = {
-            catcher: catcher
-        };
-        return service;
+  exception.$inject = ['logger'];
 
-        function catcher(message) {
-            return function(reason) {
-                logger.error(message, reason);
-            };
-        }
+  /* @ngInject */
+  function exception(logger) {
+    var service = {
+      catcher: catcher
+    };
+    return service;
+
+    function catcher(message) {
+      return function(reason) {
+        logger.error(message, reason);
+      };
     }
+  }
 })();

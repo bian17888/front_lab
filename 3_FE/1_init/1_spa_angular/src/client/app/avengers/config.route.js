@@ -1,32 +1,43 @@
+/**
+ * @fileOverview
+ * @author bian17888 16/5/31 20:10
+ */
+/**
+ * @fileOverview
+ * @author bian17888 16/5/11 21:19
+ */
+
 (function() {
-    'use strict';
 
-    angular
-        .module('app.avengers')
-        .run(appRun);
+  'use strict';
 
-    // appRun.$inject = ['routehelper']
+  angular
+    .module('app.avengers')
+    .run(appRun);
 
-    /* @ngInject */
-    function appRun(routehelper) {
-        routehelper.configureRoutes(getRoutes());
-    }
+  appRun.$inject = ['routehelper'];
 
-    function getRoutes() {
-        return [
-            {
-                url: '/avengers',
-                config: {
-                    templateUrl: 'app/avengers/avengers.html',
-                    controller: 'Avengers',
-                    controllerAs: 'vm',
-                    title: 'avengers',
-                    settings: {
-                        nav: 2,
-                        content: '<i class="fa fa-lock"></i> Avengers'
-                    }
-                }
-            }
-        ];
-    }
+  /* @ngInject */
+  function appRun(routehelper) {
+    routehelper.configureRoutes(getRoutes());
+  }
+
+  function getRoutes() {
+    return [
+      {
+        url: '/avengers',
+        config: {
+          templateUrl: 'app/avengers/avengers.html',
+          controller: 'Avengers',
+          controllerAs: 'vm',
+          title: 'avengers',
+          settings: {
+            nav: 2,
+            content: '<i class="fa fa-lock"></i> Avengers'
+          }
+        }
+      }
+    ];
+  }
+
 })();
