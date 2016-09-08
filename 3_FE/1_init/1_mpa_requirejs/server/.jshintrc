@@ -51,6 +51,7 @@
   "noyield": true,
 
   "browser": true,
+  "devel" : true,
   "jquery": true,
   "node": true,
   "mocha": true,

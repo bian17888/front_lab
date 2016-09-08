@@ -2,7 +2,6 @@
  * @fileOverview 首页
  * @author bian17888
  */
-
 (function() {
 
   'use strict';
@@ -12,9 +11,7 @@
    * @module home
    * @see module:common/utils
    */
-  define('home', ['utils'], function() {
-
-    $(function() {
+  define(['utils'], function(utils) {
 
       init();
 
@@ -32,20 +29,25 @@
        */
       function bindEvent() {
         $('.home-wrap')
-          .on('click', '.r-btn-close', xxFn);
+          .on('click', '#test_mock', testMock);
       }
 
       /**
-       * @func xxFn
-       * @desc xxFn 描述
-       * @param {Object} params - 参数描述
+       * @func testMock
+       * @desc 测试 ajax mock 数据
        */
-      function xxFn(params) {
-        // to do some thing
+      function testMock() {
+        var params = {
+          type : 'post',
+          url : 'api/index',
+          data : {name : 'home page'}
+        };
+        utils.gbAjax(params, function(data){
+          console.log(data.message);
+        });
       }
 
     });
-  });
 
 })();
 

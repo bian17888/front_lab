@@ -1,16 +1,9 @@
-## 文档模板
-#### 包含
-- null
+# 竞品平台 - 后台管理
 
-#### 未来
-- null
+## todo
 
+### gulp 
 
-## Quick Start
-Prior to taking the course, clone this repo and run the content locally
+browser-sync 升级到V2.0, 新特性使用 `middleware`, `ui`
+jade 模板
 
-```bash
-$ npm install
-$ bower install
-$ npm start
-```

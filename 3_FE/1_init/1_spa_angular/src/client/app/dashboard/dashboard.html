@@ -1,0 +1,5 @@
+<h2>ngRepeat</h2>
+<ul>
+    <input type="text" ng-model="q">
+    <li class="animate-repeat" ng-repeat="item in vm.items | filter:q | orderBy:'-id' as results ">{{ item.id }} : {{ item.name }}</li>
+</ul>

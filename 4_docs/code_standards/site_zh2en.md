@@ -27,8 +27,6 @@
 - 分类浏览 browse by category
 - 电子商务 e-business
 - 公司实力 strength
-- 版权所有 copy right
-- 友情连结 hot link
 - 应用领域 application fields
 - 人力资源 human resource / hr
 - 领导致辞 leader`s oration
@@ -94,3 +92,10 @@
 - 教育培训 education & training
 - 游乐园 amusement park
 - 在线交流 online communication
+
+## 常用摘录
+
+- 评论 comment
+- 摘要 summary
+- 版权所有 copy right
+- 友情连结 hot link

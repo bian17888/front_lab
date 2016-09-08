@@ -1,0 +1,41 @@
+/*
+ * 网站主题配色
+ * 描述 : @import "config.styl", 只用于.styl文件使用, .css将不会收影响
+ */
+
+// 首页正文
+$c-text = #2a2a2f
+// 首页 : .m-showcase的 title;
+// 列表页 + 详情页 :  正文;
+// 页尾
+// 评论 : 评论内容
+$c-text2 = #696975
+// 顶部导航
+$c-text3 = #4a4a4a
+// highcharts Y轴
+$c-text4 = #888796
+// 超链接
+$c-a = #4a38e7
+// 评论 : 人物名称
+// 顶部导航
+$c-a2 = #A28CFB
+
+/*
+ * $cb-xx 色块颜色
+ */
+// 背景颜色
+$cb-body = #ecedf2
+// 模块背景
+$cb-box = #fafafa
+// 页头页尾
+$cb-head = #dddee6
+
+
+/*
+ * mixins : box-shadow
+ */
+// 首页模块阴影 : box-shadow(0px, 3px, 6px, #dbe1fd);
+box-shadow(x,y,blur,color)
+	-moz-box-shadow: x y blur color;
+	-webkit-box-shadow: x y blur color;
+	box-shadow: x y blur color;

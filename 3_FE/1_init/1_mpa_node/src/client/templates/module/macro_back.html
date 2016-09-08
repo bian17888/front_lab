@@ -1,0 +1,75 @@
+{#
+# 分页模块
+# 说明 :
+#	1 各参数说明 : current - 当前页数, count - 总页数
+#	2 逻辑 :
+#		count <= 7时, 全部显示
+#		count > 7时, 居中显示. 如1,2,3,current,5,6,7
+#			current + 3 > count, 从最大页数倒叙, 如 count-7, count-6 ......
+#			current - 3 < 1  , 从第一页数升序, 如 1,2 ......
+#			其余              , 4,5,6,current,8,9,10
+#}
+{% macro pagination(current, count, data) %}
+	{% set date = '2016-08-08' %}
+	{% set url = '/articles/daily/' + date %}
+
+	<section class="pagination-wrap">
+		<ul class="pagination">
+			{#上一页, 是否可点击#}
+			{% if current > 1 %}
+				<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			{% else %}
+				<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			{% endif %}
+
+			{#页码部分#}
+			{% if count <= 7 %}
+				{% set arr = [1,2,3,4,5,6,7] %}
+				{% for val in arr %}
+					{% if val == current %}
+						<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+					{% else %}
+						<li><a href="{{ url + '?pageNumber=' + val + '&pageSize=10' }}">{{ val }}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% else %}
+				{% if current + 3 > count %}
+					{% set arr = [max-6,max-5,max-4,max-3,max-2,max-1,max] %}
+					{% for val in arr %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ url + '?pageNumber=' + val + '&pageSize=10' }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% elseif current - 3 < 1 %}
+					{% set arr = [1,2,3,4,5,6,7] %}
+					{% for val in arr %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ url + '?pageNumber=' + val + '&pageSize=10' }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					{% set arr = [current-3,current-2,current-1,current,current+1,current+2,current+3] %}
+					{% for val in arr %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ url + '?pageNumber=' + val + '&pageSize=10' }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endif %}
+
+			{#下一页, 是否可点击#}
+			{% if %}
+				<li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+			{% else %}
+				<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+			{% endif %}
+		</ul>
+	</section>
+
+{% endmacro %}

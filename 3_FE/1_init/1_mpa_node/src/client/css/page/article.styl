@@ -1,0 +1,95 @@
+@import "../module/theme.styl";
+
+.article-wrap
+	//列表页
+	.list
+		padding: 20px 35px 20px
+		.main
+			color: $c-text3
+			.item
+				border-bottom: 1px solid #ccc
+				padding: 20px 0
+				.pic-thumb
+					img
+						width: 100%
+				h5
+					font-size: 32px
+					margin: 0 auto 15px
+					a
+						color: $c-text3
+					a:hover
+						color: $c-text3
+						text-decoration: none
+				.summary
+					font-size: 16px
+				.info
+					color: #666
+					.time
+						text-align: right
+	//详情页
+	.detail
+		padding: 20px 35px
+		.main
+			.content
+				color: $c-text2
+				font-size: 16px
+				padding: 20px 0
+				h5
+					color: $c-text
+					font-size: 32px
+					margin-top: 30px
+					text-align: center
+				.info
+					color: $c-text
+					font-size: 20px
+					margin: 20px auto 50px
+					text-align: center
+					span, .author, .visitor, .source
+						display: inline-block
+						vertical-align: middle
+						line-height: 30px
+					.author
+						font-size: 18px
+						margin: 0 5px
+					.visitor
+						color: $c-text2
+						font-size: 14px
+					.source
+						color: $c-a
+						font-size: 14px
+						margin: 0 5px
+				p
+					line-height: 1.8
+			.content-emphasized
+				background-color: #eee
+				border-left: 6px solid #ddd
+				color: $c-text3
+				padding: 30px 10px
+				margin-top: 20px
+				p
+					position: relative
+					padding: 0 55px
+					z-index: 9
+					.span-quotation
+						color: $c-text4
+						font-size: 45px
+						line-height: 45px
+						position: absolute
+						z-index: 99
+					.span-quotation-left
+						left: 0
+						top: 0
+					.span-quotation-right
+						right: 0
+						bottom: -20px
+				.pic-head
+					margin-left: 30px
+
+	//热门文章
+	.m-showcase-top5
+		.m-showcase-content
+			a
+				font-size: 16px
+				color: #262626
+			.col-sm-4
+				padding-left: 0

@@ -1,0 +1,237 @@
+@import "theme.styl";
+@import "base.css";
+@import "layout.css";
+
+//header
+.m-header
+	background-color: $cb-head
+	margin-bottom: 20px
+	a
+		color: $c-text3
+	.navbar
+		margin-bottom: 0
+		border-bottom: 0
+		.navbar-brand
+			padding: 0
+			img
+				height: 50px
+		.navbar-nav
+			margin-bottom: 0
+			> li
+				> a
+					padding: 15px 40px
+				> a:hover
+					color: $c-a
+					background-color: transparent
+			> li.active
+				> a
+				> a:hover
+					color: $c-a
+					background-color: transparent
+	.navbar-default
+		background-color: #f2f2f2
+
+//footer
+.m-footer
+	background-color: $cb-head
+	color: $c-text2
+	line-height: 1.5
+	margin-top: 35px
+	padding: 30px 20px
+	section
+		text-align: center
+		margin: 10px auto
+		a
+			color: $c-text2
+		.span-separate
+			margin: 0 15px
+
+//m-filter-aside
+.m-aside
+	color: $c-text3
+	font-size: 14px
+	padding: 20px 20px
+	a
+		color: $c-text3
+	section
+		font-size: 14px
+		margin-top: 40px
+		h5
+			font-size: 18px
+	section:first-child
+		margin-top: 0
+	section.dp
+		input[readonly='readonly']
+			background-color: #fff
+	section.classify
+		ul
+			margin-top: 20px
+		li
+			margin: 10px 0
+			a
+				color: $c-text3
+			a:hover, a.active
+				color: $c-a
+				text-decoration: none
+	section.tags
+		a.label-default
+			color: #fff
+	section.time
+		font-size: 14px
+		margin-top: 40px
+		li
+			margin: 10px 0
+			a
+				color: $c-text3
+			a:hover, a.active
+				color: $c-a
+				text-decoration: none
+
+/*
+ * m-showcase
+ */
+.m-showcase
+	background-color: $cb-box
+	.m-showcase-head
+		border-bottom: 1px solid #dddfeb
+		font-size: 14px
+		margin-bottom: 20px
+		h5
+			color: $c-text2
+			margin: 0
+			padding: 15px 20px
+		p
+			text-align: right
+			margin: 0
+			padding: 15px 20px
+			a
+				display: inline-block
+	.m-showcase-content
+		padding-bottom: 20px
+		h6
+			font-size: 18px
+			margin: 0 0 10px
+			padding: 0 20px
+			a
+				color: $c-a
+		.line
+			font-size: 0
+			height: 0
+			line-height: 0
+			border-bottom: 1px dashed #b3b5c4
+			margin: 20px 20px
+
+//最新分析报告
+.m-showcase-zxfxbg
+	.m-showcase-content
+		.zxfxbg-pic
+			margin: 0 0 0 20px
+		.info
+			font-size: 16px
+			padding: 0 10px
+			.more
+				font-size: 14px
+			.other
+				font-size: 14px
+				margin-bottom: 0
+
+//竞争日报
+.m-showcase-jzrb
+	.m-showcase-content
+		.summary
+			font-size: 16px
+			margin: 15px 20px
+		.m-comment
+			.comments
+				height: 114px
+				overflow: hidden
+			.comment-form
+				margin: 10px 20px 0
+				textarea
+					background-color: transparent
+					border: 1px solid #dddfeb
+
+//评论
+.m-comment
+	.summary
+		background-color: transparent
+	.btn-bar
+		margin: 20px 20px
+		.btn
+			margin-right: 5px
+			em
+				font-style: normal
+	.comments
+		.pic-head
+			margin: 0 0 10px 20px
+		.author
+			color: $c-text4
+			margin-bottom: 5px
+			padding-right: 20px
+			a
+				color: $c-a2
+		.info
+			color: $c-text2
+			padding-right: 20px
+		.comments-btn-bar
+			.fa
+				cursor: pointer
+				margin-right: 5px
+			.active
+				color: $c-a
+			.comment-box
+				background-color: #eee
+				margin-right: 20px
+				padding: 20px 0px 5px
+				.comment-form
+					textarea
+						background-color: #fff
+	.comment-form
+		margin: 10px 20px 0
+		textarea
+			background-color: transparent
+			border: 1px solid #dddfeb
+		.form-group label.error
+			font-size: 12px
+			color: #f00
+			margin: 5px 0 0 5px
+
+//图表
+.m-highcharts
+	.m-showcase-content
+		padding: 0px 20px 20px
+
+//面包屑导航
+.m-crumb
+	border-bottom: 1px solid #eee
+	color: $c-text3
+	padding-bottom: 10px
+	p
+		margin-bottom: 0
+		a
+			color: $c-text3
+		span.active
+			color: $c-a
+
+//分页
+.m-pagination-wrap
+	text-align: center
+	margin-top: 40px
+	.li-form
+		position: relative
+		float: left
+		margin-left: 20px
+		z-index: 9
+		.w42
+			width: 42px
+		label.error
+			position: absolute
+			left: 0
+			bottom: -20px
+			color: #f00
+			font-size: 12px
+			z-index: 99
+
+//todo : 稍后实现
+.m-article-hot
+	padding: 20px 0

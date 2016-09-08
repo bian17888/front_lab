@@ -1,0 +1,39 @@
+{
+  "name": "SandTableMix",
+  "version": "0.0.1",
+  "description": "新版竞争沙盘",
+  "main": "app.js",
+  "authors": [
+    "zhuzhen zhuzhen.bk@alibaba-inc.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "koa",
+    "vote",
+    "poll",
+    "mongodb"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery-validation": "jquery-validate#~1.14.0",
+    "underscore": "~1.8.3",
+    "requirejs": "~2.1.20",
+    "highcharts": "^4.2.5",
+    "domReady": "^2.0.1",
+    "toastr": "^2.1.2",
+    "moment": "^2.14.1",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "font-awesome": "^4.6.3",
+    "sine-waves": "^0.3.0"
+  }
+}

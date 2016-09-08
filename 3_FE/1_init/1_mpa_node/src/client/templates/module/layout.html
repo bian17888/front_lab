@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>{% block title %}新版竞争沙盘{% endblock %}</title>
+	{#公共 css#}
+	{% block css %}
+		<link rel="stylesheet" href="/css/main.css">
+	{% endblock %}
+</head>
+
+<body class={% block bodyClass %}st-wrap{% endblock %}>
+
+{#页头#}
+{% block header %}
+	{% include './header.html' %}
+{% endblock %}
+
+{#内容区#}
+{% block content %}
+	<section class="container-fluid">
+		<p>home page !!! </p>
+		<div class="carousel"></div>
+		<p><img class="lazy" data-original="/images/temp/pic_224x330_01.jpg" width="224" height="330" alt=""></p>
+		<div id="div"></div>
+	</section>
+{% endblock %}
+
+{#页尾#}
+{% block footer %}
+	{% include './footer.html' %}
+{% endblock %}
+
+{#公共 js#}
+{% block js %}
+	<script src="/app/components/requirejs/require.js" data-main="/app/main"></script>
+{% endblock %}
+
+{#每页独立 js#}
+{% block jsPages %}{% endblock %}
+
+</body>
+
+</html>

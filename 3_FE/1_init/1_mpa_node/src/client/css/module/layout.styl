@@ -1,0 +1,85 @@
+/*
+ * 响应式布局
+ * 描述 : 针对 PC端 和 移动端, 不同布局
+ */
+
+//移动端 < 768
+@media screen and  (max-width: 767px)
+	// 公共模块
+	body
+		//公共头
+		.m-header
+			.navbar-brand
+				img
+					width: 95%
+		//动态
+		.daily-tags
+			display: none
+		//最新分析报告
+		.m-showcase-zxfxbg
+			.m-showcase-content
+				.zxfxbg-pic
+					margin: 0
+		//竞争日报
+		.m-showcase-jzrb
+			.m-showcase-content
+				.m-comment
+					.comments
+						.pic-head
+							display: none
+						.author
+						.info
+							padding: 0 20px
+
+	// 首页推荐栏目
+	body.home-wrap
+		.analysis
+			.ul-wrap
+				ul
+					li
+						width: 100%
+						margin: 0 0 20px 0
+
+	// 文章列表
+	body.article-wrap
+		.m-aside
+			display: none
+		.m-pagination-wrap
+			.li-form
+				display: none
+
+	// 文章详情
+	body.article-wrap
+		.detail
+			.content
+				.content-emphasized
+					.pic-head
+						display: none
+			.m-comment
+				.comments
+					.pic-head
+						display: none
+				.btn-bar
+					margin: 20px 0
+				.comment-form
+					margin: 10px 0
+
+//PC端 > 768
+@media screen and  (min-width: 768px)
+	body
+		//最新分析报告
+		.m-showcase-zxfxbg
+			.m-showcase-content
+				.summary
+					height: 195px
+					overflow: hidden
+				.other
+					margin-top: 50px
+		//竞争日报
+		.m-showcase-jzrb
+			.m-showcase-content
+				.summary
+					height: 95px
+					overflow: hidden
+
+

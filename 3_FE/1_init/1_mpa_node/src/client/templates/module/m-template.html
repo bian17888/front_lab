@@ -1,0 +1,204 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+	{#m-showcase : 展示模块#}
+	<section class="container-fluid">
+		<div class="row">
+			<div class="row-height">
+				{#模板#}
+				<div class="col-sm-6 col-sm-height">
+					<div class="inside-full-height m-sameheight-shadow">
+						<div class="m-showcase m-showcase-zxfxbg">
+							<div class="m-showcase-head">
+								<div class="row">
+									<div class="col-sm-8">
+										<h5>m-showcase-head : H5标题模块</h5>
+									</div>
+								</div>
+							</div>
+							<div class="m-showcase-content">
+								<div class="row">
+									<div class="col-sm-12">
+										m-showcase-content
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				{#分析报告#}
+				<div class="col-sm-6 col-sm-height">
+					<div class="inside-full-height m-sameheight-shadow">
+						<div class="m-showcase m-showcase-zxfxbg">
+							<div class="m-showcase-head">
+								<div class="row">
+									<div class="col-sm-8">
+										<h5>举例 : 最新分析报告</h5>
+									</div>
+								</div>
+							</div>
+							<div class="m-showcase-content">
+								<div class="row">
+									<div class="col-sm-12">
+										<h6><a href="#">超链接</a></h6>
+									</div>
+									<div class="col-sm-6"><img class="zxfxbg-pic img-responsive"
+															   src=""
+															   alt="img"></div>
+									<div class="col-sm-6">
+										<div class="info">
+											<p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+												Ad assumenda atque cumque, eligendi est eum exercitationem facilis fuga
+												laboriosam molestiae nemo obcaecati optio praesentium reiciendis
+												repellendus saepe ullam vel voluptatem.</p>
+											<p class="more"><a href="#">查看更多&gt;&gt;</a></p>
+											<p class="other"><span>x年x月</span> |
+												<span>作者</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{#m-comment : 评论模块(简版)#}
+	<section class="container-fluid mt-20">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="inside-full-height m-sameheight-shadow">
+					<article class="m-comment">
+						<div class="comments">
+							<div class="row">
+								<div class="row-height">
+									<div class="col-sm-1 col-sm-height"><img
+												class="pic-head img-responsive img-circle"
+												src="/images/temp/pic_temp.jpg" alt=""></div>
+									<div class="col-sm-11 col-sm-height">
+										<p class="author clearfix"><a href="#">无数据</a> <span class="pull-right time">2016-06-29 17:16:15</span>
+										</p>
+										<p class="info overflow-h">
+											一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="comment-form" action="" name=""
+							  method="post">
+							<div class="form-group">
+												<textarea class="form-control" name="" id="" rows="1"
+														  placeholder="输入你的评论..."></textarea>
+							</div>
+							<div class="form-group mb-0 text-right">
+								<button class="btn btn-primary" type="button">
+									评 论
+								</button>
+								<button class="btn btn-default" type="button">
+									取 消
+								</button>
+							</div>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{#m-comment : 评论模块(完整版)#}
+	<section class="container-fluid mt-20">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="inside-full-height m-sameheight-shadow">
+					<article class="m-comment">
+						<div class="summary">null</div>
+						<div class="btn-bar">
+							<a class="btn btn-primary" href="#">评论 (<em>12</em>)</a>
+							<a class="btn btn-default" href="#"><i
+										class="fa fa-thumbs-o-up"></i> (<em>102</em>)</a>
+							<a class="btn btn-default" href="#"><i class="fa fa-star-o"></i> (<em>177</em>)</a>
+						</div>
+						<div class="comments">
+							<div class="row">
+								<div class="row-height">
+									<div class="col-sm-1 col-sm-height"><img
+												class="pic-head img-responsive img-circle"
+												src="/images/temp/pic_temp.jpg" alt=""></div>
+									<div class="col-sm-11 col-sm-height">
+										<p class="author clearfix"><a href="#">无数据</a> <span class="pull-right time">2016-06-29 17:16:15</span>
+										</p>
+										<p class="info overflow-h">
+											一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十
+										</p>
+										<div class="comments-btn-bar">
+											<p>
+												<i class="fa fa-thumbs-o-up">2</i>
+												<i class="fa fa-comment-o active">1</i>
+											</p>
+											<div class="comment-box">
+												<div class="comments">
+													<div class="row">
+														<div class="row-height">
+															<div class="col-sm-1 col-sm-height"><img
+																		class="pic-head img-responsive img-circle"
+																		src="/images/temp/pic_temp.jpg" alt=""></div>
+															<div class="col-sm-11 col-sm-height">
+																<p class="author clearfix"><a href="#">无数据</a> <span class="pull-right time">2016-06-29 17:16:15</span>
+																</p>
+																<p class="info">
+																	一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十
+																</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<form class="comment-form" action="" name=""
+													  method="post">
+													<div class="form-group">
+												<textarea class="form-control" name="" id="" rows="1"
+														  placeholder="输入你的评论..."></textarea>
+													</div>
+													<div class="form-group text-right">
+														<button class="btn btn-primary" type="button">
+															评 论
+														</button>
+														<button class="btn btn-default" type="button">
+															取 消
+														</button>
+													</div>
+												</form>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<form class="comment-form" action="" name=""
+							  method="post">
+							<div class="form-group">
+												<textarea class="form-control" name="" id="" rows="1"
+														  placeholder="输入你的评论..."></textarea>
+							</div>
+							<div class="form-group mb-0 text-right">
+								<button class="btn btn-primary" type="button">
+									评 论
+								</button>
+							</div>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block jsPages %}
+	<script type="text/javascript">require(['page/m-template'])</script>
+{% endblock %}

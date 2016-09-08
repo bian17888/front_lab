@@ -1,0 +1,175 @@
+{#
+# 分页模块
+# 说明 :
+#	1 各参数说明 : current - 当前页数, count - 总页数
+#	2 逻辑 :
+#		count <= 7时, 全部显示
+#		count > 7时, 居中显示. 如1,2,3,current,5,6,7
+#			current + 3 > count, 从最大页数倒叙, 如 count-7, count-6 ......
+#			current - 3 < 1  , 从第一页数升序, 如 1,2 ......
+#			其余              , 4,5,6,current,8,9,10
+#}
+{% macro pagination(current, count) %}
+
+	{#tolight : 技巧 - 解决swig中无for循环的问题 #}
+	{% set arr = Array(count) %}
+	{% for key, value in arr %}
+		{% set arr[key] = key+1 %}
+	{% endfor %}
+	{% set arr_normal = [current-3,current-2,current-1,current,current+1,current+2,current+3] %}
+	{% set arr_max2min = [count-6,count-5,count-4,count-3,count-2,count-1,count] %}
+	{% set querystring = '?pageSize=10&pageNumber=' %}
+	{% set previous = current-1 %}
+	{% set next = current+1 %}
+
+	<section class="m-pagination-wrap">
+		<ul class="pagination">
+
+			{#上一页, 是否可点击#}
+			{% if current > 1 %}
+				<li><a href="{{ querystring + previous }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+				</li>
+			{% else %}
+				<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			{% endif %}
+
+
+			{#页码部分#}
+			{% if count <= 7 %}
+				{% for val in arr %}
+					{% if val == current %}
+						<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+					{% else %}
+						<li><a href="{{ querystring + val }}">{{ val }}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% else %}
+				{% if current + 3 > count %}
+					{% for val in arr_max2min %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ querystring + val }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% elseif current - 3 < 1 %}
+					{% for val in arr %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ querystring + val }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% else %}
+					{% for val in arr_normal %}
+						{% if val == current %}
+							<li class="active"><span>{{ val }}<span class="sr-only">(current)</span></span></li>
+						{% else %}
+							<li><a href="{{ querystring + val }}">{{ val }}</a></li>
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endif %}
+
+			{#下一页, 是否可点击#}
+			{% if current < count %}
+				<li><a href="{{ querystring + next }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+				</li>
+			{% else %}
+				<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+			{% endif %}
+
+			<li class="li-form">
+				<form class="form-inline" action="{{ querystring }}" method="get" name="pagination"
+				">
+				<input type="hidden" name="pageSize" value="10">
+				<div class="form-group">
+					<p class="form-control-static">共{{ count }}页</p>
+				</div>
+				<div class="form-group">
+					<label for="page">到第</label>
+					<input id="page" class="form-control input-sm w42" name="pageNumber" data-count="{{ count }}"
+						   type="text" placeholder="">
+					<label for="">页</label>
+				</div>
+				<button type="submit" class="btn btn-sm btn-default">确定</button>
+				</form>
+			</li>
+		</ul>
+
+	</section>
+
+{% endmacro %}
+
+
+
+
+{#
+# 列表页-左侧筛选条件
+# 说明 :
+#	1 各参数说明 : data - 数据 || showDatepicker - 显示日期选择空间(用于日报列表页)
+#}
+{% macro mAside(data, showDatepicker) %}
+
+	{% set params = data.params %}
+	{% set groups = params.groups %}
+	{% set tags = params.tags %}
+	{% set date = params.date %}
+
+	<aside class="m-aside">
+
+		{#日期筛选#}
+		{% if showDatepicker %}
+			<section class="dp">
+				<h5>日期筛选</h5>
+				<form class="" action="" method="GET" name="daily_datepicker" data-path="/articles/daily/">
+					<input type="hidden" name="pageSize" value="10">
+					<input type="hidden" name="pageNumber" value="1">
+					<div class="form-group">
+						<div class="input-group date">
+							<input id="time" class="form-control" type="text" readonly="readonly" value="{{ date }}">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+						</div>
+					</div>
+					<button class="btn btn-default" type="submit">查询</button>
+				</form>
+			</section>
+		{% endif %}
+
+		{#分类筛选#}
+		{% if groups and groups.length > 0 %}
+			<section class="classify">
+				<h5>分类筛选</h5>
+				<ul>
+					{% for val in groups %}
+						<li><a class="{% if val.active %}active{% endif %}" href="{{ val.href }}">{{ val.title }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</section>
+		{% endif %}
+
+		{#标签筛选#}
+		{% if tags and tags.length > 0 %}
+			<section class="tags">
+				<h5>标签筛选</h5>
+				<p>
+					{% for val in tags %}
+						<a class="label label-default {% if val.active %}active{% endif %}"
+						   href="{{ val.href }}">{{ val.title|default('无标签title属性') }}</a>
+					{% endfor %}
+				</p>
+			</section>
+		{% endif %}
+
+		{#时间范围筛选#}
+		<section class="time hide">
+			<h5>时间范围筛选</h5>
+			<ul>
+				<li><a class="active" href="#">一周内</a></li>
+				<li><a href="#">一个月内</a></li>
+			</ul>
+		</section>
+
+	</aside>
+{% endmacro %}
