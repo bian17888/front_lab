@@ -1,0 +1,57 @@
+/*
+ * 响应式布局
+ * 描述 : 针对 PC端 和 移动端, 不同布局
+ */
+@media screen and (max-width: 767px) {
+  body .m-header .navbar-brand img {
+    width: 95%;
+  }
+  body .daily-tags {
+    display: none;
+  }
+  body .m-showcase-zxfxbg .m-showcase-content .zxfxbg-pic {
+    margin: 0;
+  }
+  body .m-showcase-jzrb .m-showcase-content .m-comment .comments .pic-head {
+    display: none;
+  }
+  body .m-showcase-jzrb .m-showcase-content .m-comment .comments .author,
+  body .m-showcase-jzrb .m-showcase-content .m-comment .comments .info {
+    padding: 0 20px;
+  }
+  body.home-wrap .analysis .ul-wrap ul li {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  body.article-wrap .m-aside {
+    display: none;
+  }
+  body.article-wrap .m-pagination-wrap .li-form {
+    display: none;
+  }
+  body.article-wrap .detail .content .content-emphasized .pic-head {
+    display: none;
+  }
+  body.article-wrap .detail .m-comment .comments .pic-head {
+    display: none;
+  }
+  body.article-wrap .detail .m-comment .btn-bar {
+    margin: 20px 0;
+  }
+  body.article-wrap .detail .m-comment .comment-form {
+    margin: 10px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .m-showcase-zxfxbg .m-showcase-content .summary {
+    height: 195px;
+    overflow: hidden;
+  }
+  body .m-showcase-zxfxbg .m-showcase-content .other {
+    margin-top: 50px;
+  }
+  body .m-showcase-jzrb .m-showcase-content .summary {
+    height: 95px;
+    overflow: hidden;
+  }
+}

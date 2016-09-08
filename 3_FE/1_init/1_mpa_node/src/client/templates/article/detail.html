@@ -1,0 +1,196 @@
+{% extends './../module/layout.html' %}
+
+{% block css %}
+	{% parent %}
+	<link rel="stylesheet" href="/css/page/article.css">
+{% endblock %}
+
+{% block bodyClass %}article-wrap{% endblock %}
+
+{% block content %}
+	{#初始化页面渲染数据#}
+	{% for key, val in data %}
+		{% if val['article'] %}
+			{% set dataDetail = val['article'] %}
+		{% elseif val['/articles/top'] %}
+			{% set dataTop5 = val['/articles/top'] %}
+		{% endif %}
+	{% endfor %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row-sm-height">
+
+				{#文章详情#}
+				<div class="col-sm-8 col-sm-height col-sm-top">
+					<div class="inside-full-height m-sameheight-shadow">
+						<article class="detail">
+							{% if dataDetail.navs %}
+								<section class="m-crumb">
+									<p>
+										{% for val in dataDetail.navs %}
+											{% if val.active %}
+												<span class="active">{{ val.title }}</span>
+											{% else %}
+												<a href="{{ val.href }}">{{ val.title }}</a>
+												<span class="separate">&gt;</span>
+											{% endif %}
+										{% endfor %}
+									</p>
+								</section>
+							{% endif %}
+
+							<section class="main">
+								<div class="content">
+									<h5>{{ dataDetail.title }}</h5>
+									<div class="info">
+										<span class="time">{{ dataDetail.modified }}</span>
+										<span class="author">{{ dataDetail.author.lastName }}</span>
+										<small class="visitor">浏览 <span>{{ dataDetail.num_read }}</span></small>
+										<a class="source" href="{{ dataDetail.source }}" target="_blank">查看源文档</a>
+									</div>
+									<div class="content-article">
+										{{ dataDetail.content|raw }}
+									</div>
+									{% if dataDetail.emphasizedComment %}
+										<div class="content-emphasized">
+											<div class="row">
+												<div class="col-sm-1"><img
+															class="pic-head img-responsive img-circle"
+															src="{{ dataDetail.emphasizedComment.author.img }}" alt="">
+												</div>
+												<div class="col-sm-11 content-emphasized-main">
+													<p>
+														{{ dataDetail.emphasizedComment.content }}
+														<span class="span-quotation span-quotation-left">“</span>
+														<span class="span-quotation span-quotation-right">”</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									{% endif %}
+								</div>
+								{#评论文章#}
+								<article class="m-comment" data-articleid="{{ dataDetail.id }}">
+									<div class="btn-bar clearfix">
+										<button id="btn_plwz" class="btn btn-default" type="button">评论文章
+											(<em>{{ dataDetail.num_comment }}</em>)
+										</button>
+										{#点赞#}
+										{% if dataDetail.is_thumbed %}
+											<button id="btn_thumb" class="btn btn-info" type="button" data-flag="1"><i
+														class="fa fa-thumbs-o-up"></i>
+												(<em>{{ dataDetail.num_thumbed }}</em>)
+											</button>
+										{% else %}
+											<button id="btn_thumb" class="btn btn-default" type="button" data-flag="0">
+												<i
+														class="fa fa-thumbs-o-up"></i>
+												(<em>{{ dataDetail.num_thumbed }}</em>)
+											</button>
+										{% endif %}
+										{#收藏#}
+										{% if dataDetail.is_favorite %}
+											<button id="btn_favor" class="btn btn-info" type="button" data-flag="1"><i
+														class="fa fa-star-o"></i>
+												(<em>{{ dataDetail.num_favorite }}</em>)
+											</button>
+										{% else %}
+											<button id="btn_favor" class="btn btn-default" type="button" data-flag="0">
+												<i
+														class="fa fa-star-o"></i>
+												(<em>{{ dataDetail.num_favorite }}</em>)
+											</button>
+										{% endif %}
+										{#附件下载#}
+										{% if dataDetail.attachments and dataDetail.attachments.length > 0 %}
+											{% for val in dataDetail.attachments %}
+												<a class="btn btn-default" target="_blank" href="{{ val.url }}" >
+													<i class="fa fa-download"></i>
+													<em>附件 : {{ val.name|default('无附件标题') }}</em>
+												</a>
+											{% endfor %}
+										{% endif %}
+									</div>
+									<div class="summary"></div>
+									<div class="comments">
+										{% if dataDetail.comments.count > 0 %}
+											{% for val in dataDetail.comments.data %}
+												<div class="row">
+													<div class="row-height">
+														<div class="col-sm-1 col-sm-height col-sm-top"><img
+																	class="pic-head img-responsive img-circle"
+																	src="{{ val.author.img }}" alt=""></div>
+														<div class="col-sm-11 col-sm-height col-sm-top">
+															<p class="author clearfix"><a
+																		href="#">{{ val.author.nickNameCn }}</a> <span
+																		class="pull-right time">{{ val.gmt_create }}</span>
+															</p>
+															<p class="info overflow-h">{{ val.content }}</p>
+														</div>
+													</div>
+												</div>
+											{% endfor %}
+										{% endif %}
+									</div>
+									<form id="comment_form" class="comment-form" action="" name="comment-form"
+										  method="post">
+										<div class="form-group">
+												<textarea class="form-control" name="content" id="" rows="1"
+														  placeholder="输入你的评论..."></textarea>
+										</div>
+										<div class="form-group mb-0 text-right">
+											<button class="btn btn-primary" type="submit">
+												评 论
+											</button>
+										</div>
+									</form>
+								</article>
+							</section>
+						</article>
+					</div>
+				</div>
+
+				{#热门文章#}
+				<div class="col-sm-4 col-sm-height col-sm-top">
+					<div class="inside-full-height m-sameheight-bg">
+						<div class="m-showcase m-showcase-top5">
+							<div class="m-showcase-head">
+								<div class="row">
+									<div class="col-sm-12">
+										<h5>热门文章</h5>
+									</div>
+								</div>
+							</div>
+							<div class="m-showcase-content">
+								{% if dataTop5.status == 200 %}
+									{% for val in dataTop5.data %}
+										<div class="row">
+											<div class="col-sm-1"></div>
+											<div class="col-sm-6">
+												<p><a class="pic" href="/article/{{ val.id }}"><img
+																class="img-responsive"
+																src="{{ val.cover }}" alt=""></a></p>
+											</div>
+											<div class="col-sm-4">
+												<p><a class="title"
+													  href="/article/{{ val.id }}">{{ val.title }}</a></p>
+											</div>
+											<div class="col-sm-1"></div>
+										</div>
+									{% endfor %}
+								{% else %}
+									<div class="row">无热门文章</div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block jsPages %}
+	<script type="text/javascript">require(['page/article/detail'])</script>
+{% endblock %}

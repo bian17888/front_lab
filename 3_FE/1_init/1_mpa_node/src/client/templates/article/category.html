@@ -1,0 +1,92 @@
+{% extends './../module/layout.html' %}
+{% import '../module/macro.html' as macro_st %}
+
+{% block css %}
+	{% parent %}
+	<link rel="stylesheet" href="/css/page/article.css">
+{% endblock %}
+
+{% block bodyClass %}article-wrap{% endblock %}
+
+{% block content %}
+	{#初始化页面渲染数据#}
+	{% for key, val in data %}
+		{% if val['category'] %}
+			{% set category = val['category'] %}
+		{% endif %}
+	{% endfor %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row-sm-height">
+
+				{#筛选边栏#}
+				<div class="col-sm-2 col-sm-height m-sameheight-bg">
+					<div class="inside-full-height">
+						{{ macro_st.mAside(category.params) }}
+					</div>
+				</div>
+
+				{#文章列表#}
+				<div class="col-sm-10 col-sm-height col-sm-top">
+					<div class="inside-full-height m-sameheight-bg">
+						<article class="list">
+							{% if category.status == 200 %}
+							<section class="m-crumb">
+								<p>
+									{% for val in category.params.navs %}
+										{% if val.active %}
+											<span class="active">{{ val.title }}</span>
+										{% else %}
+											<a href="{{ val.href }}">{{ val.title }}</a>
+											<span class="separate">&gt;</span>
+										{% endif %}
+									{% endfor %}
+								</p>
+							</section>
+							{% endif %}
+
+							{% if category.status == 200 and category.data.length > 0 %}
+								<section class="main">
+									{% for val in category.data %}
+									<div class="item">
+										<div class="row">
+											<div class="col-sm-4">
+												<a class="pic-thumb" href="/article/{{ val.id }}"><img class="img-responsive"
+																				   src="{{ val.cover }}"
+																				   alt=""></a>
+											</div>
+											<div class="col-sm-8">
+												<h5 class="overflow-h"><a href="/article/{{ val.id }}">{{ val.title }}</a></h5>
+												<p class="summary">{{ val.summary }}</p>
+												<div class="info">
+													<div class="row">
+														<div class="col-sm-10">
+															{% set str2arr = val.tags.split(',') %}
+															{% for val in str2arr %}
+																<span class="label label-default">{{ val }}</span>
+															{% endfor %}
+														</div>
+														<div class="col-sm-2"><p class="time"><span>{{ val.modified }}</span></p></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+								</section>
+
+								{{ macro_st.pagination(category.current, category.count) }}
+							{% else %}
+							<section class="main">暂无内容...</section>
+							{% endif %}
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block jsPages %}
+	<script type="text/javascript">require(['page/article/list'])</script>
+{% endblock %}
