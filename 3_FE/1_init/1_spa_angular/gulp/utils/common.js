@@ -14,7 +14,7 @@ module.exports = function() {
 
   var config = require('../config')();
   var mock = require('../../mock/api');
-  var port = process.env.PORT || config.defaultPort;
+  var port = config.env.port;
 
   // export object
   var utils = {
@@ -100,7 +100,7 @@ module.exports = function() {
       server: {
         baseDir: isDev ? config.client : config.build
       },
-      port: 3100,
+      port: port,
       files: isDev ? [
         config.client + '**/*.*',
         '!' + config.stylus,
@@ -119,7 +119,7 @@ module.exports = function() {
       logPrefix: 'sandtable',
       notify: true,
       reloadDelay: config.browserReloadDelay,
-      middleware: [mockData]
+      middleware: config.env.mock === 'true' ? [mockData] : []
     }
 
     browserSync.init(options);
@@ -130,14 +130,14 @@ module.exports = function() {
 
   function mockData(req, res, next) {
     var theUrl = url.parse(req.url);
-    theUrl = theUrl.pathname.replace('/','');
+    theUrl = theUrl.pathname.replace('/', '');
     var json = mock[theUrl];
 
     if (json) {
       json = json();
       json = JSON.stringify(json);
-      setTimeout(function(){
-        res.writeHead(200, {'Content-Type' : 'application/json'});
+      setTimeout(function() {
+        res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(json, 'utf8');
         res.end();
       }, 500)

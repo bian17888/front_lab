@@ -16,6 +16,15 @@ module.exports = function() {
     build: build,
 
     /**
+     * node env
+     */
+    env: {
+      port: process.env.PORT || 3100,
+      mock: process.env.MOCK || 'false',
+      node_env: process.env.NODE_ENV || 'development'
+    },
+
+    /**
      * file path
      */
     index: client + 'index.html',
@@ -75,7 +84,6 @@ module.exports = function() {
   return config;
 
   //////////////////////////////////////////////////
-
 
 
 };

@@ -4,5 +4,7 @@
  */
 
 module.exports = {
-  'articles/recommend' : require('./articles/recommend').response
+    'articles/recommend': require('./articles/recommend').response,
+    // mock post 请求
+    'send-auth-code': require('./other').response
 }

@@ -66,7 +66,7 @@ gulp.task('fonts', ['clean-fonts'], function() {
 /**
  * wiredep : install bower's lib
  */
-gulp.task('wiredep', ['templatecache'], function() {
+gulp.task('wiredep',  function() {
   utils.log('Wire up bower css js and app js into the html .')
   var options = config.getWiredepDefaultOptions();
 
@@ -92,7 +92,7 @@ gulp.task('inject', ['wiredep', 'styles'], function() {
 /**
  * optimize : combine files
  */
-gulp.task('optimize', ['inject'], function() {
+gulp.task('optimize', ['templatecache','inject'], function() {
   utils.log('Optimizing the javascript, css, html .');
 
   var assets = $.useref.assets({searchPath : './src/client/'});
