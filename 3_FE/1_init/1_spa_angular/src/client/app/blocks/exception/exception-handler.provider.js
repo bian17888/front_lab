@@ -13,6 +13,7 @@
     .provider('exceptionHandler', exceptionHandlerProvider)
     .config(config);
 
+
   /**
    * Must configure the exception handling
    * @return {[type]}
@@ -31,6 +32,7 @@
       return {config: this.config};
     };
   }
+
 
   config.$inject = ['$provide'];
   /**

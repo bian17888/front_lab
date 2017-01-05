@@ -9,9 +9,13 @@
 
   var core = angular.module('app.core');
 
+
+  /**
+   * toastr : 消息通知配置
+   */
   core.config(toastrConfig);
 
-  toastrConfig.$inject = ['toastr']
+  toastrConfig.$inject = ['toastr'];
 
   /* @ngInject */
   function toastrConfig(toastr) {
@@ -19,21 +23,17 @@
     toastr.options.positionClass = 'toast-bottom-right';
   }
 
-  var config = {
-    appErrorPrefix: '[NG-Modular Error] ', //Configure the exceptionHandler decorator
-    appTitle: 'Angular Modular Demo',
-    version: '1.0.0'
-  };
 
-  core.value('config', config);
-
+  /**
+   *
+   */
   core.config(configure);
 
   // $logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider
   configure.$inject = ['$logProvider', '$routeProvider', 'routehelperConfigProvider', 'exceptionHandlerProvider'];
 
   /* @ngInject */
-  function configure ($logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider) {
+  function configure($logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider) {
     // turn debugging off/on (no info or warn)
     if ($logProvider.debugEnabled) {
       $logProvider.debugEnabled(true);
@@ -58,5 +58,17 @@
     exceptionHandlerProvider.configure(config.appErrorPrefix);
 
   }
+
+
+  /**
+   * 全局设置
+   */
+  var config = {
+    appErrorPrefix: '[NG-Modular Error] ', //Configure the exceptionHandler decorator
+    appTitle: 'Angular Modular Demo',
+    version: '1.0.0'
+  };
+
+  core.value('config', config);
 
 })();

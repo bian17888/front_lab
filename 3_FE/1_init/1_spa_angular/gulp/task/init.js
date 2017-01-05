@@ -61,19 +61,19 @@ gulp.task('fonts', ['clean-fonts'], function() {
   return gulp
     .src(config.fonts)
     .pipe(gulp.dest(config.build + 'fonts'));
-})
+});
 
 /**
  * wiredep : install bower's lib
  */
-gulp.task('wiredep',  function() {
-  utils.log('Wire up bower css js and app js into the html .')
+gulp.task('wiredep', function() {
+  utils.log('Wire up bower css js and app js into the html .');
   var options = config.getWiredepDefaultOptions();
 
   return gulp
     .src(config.index)
     .pipe(wiredep(options))
-    .pipe($.inject(gulp.src(config.js),{ignorePath : '/src/client'}))
+    .pipe($.inject(gulp.src(config.js), {ignorePath: '/src/client'}))
     .pipe(gulp.dest(config.client));
 });
 
@@ -81,21 +81,21 @@ gulp.task('wiredep',  function() {
  * inject : install custom css
  */
 gulp.task('inject', ['wiredep', 'styles'], function() {
-  utils.log('Inject Custom Css into the html .')
+  utils.log('Inject Custom Css into the html .');
 
   return gulp
     .src(config.index)
-    .pipe($.inject(gulp.src(config.css),{ignorePath : '/src/client'}))
+    .pipe($.inject(gulp.src(config.css), {ignorePath: '/src/client'}))
     .pipe(gulp.dest(config.client));
 });
 
 /**
  * optimize : combine files
  */
-gulp.task('optimize', ['templatecache','inject'], function() {
+gulp.task('optimize', ['templatecache', 'inject'], function() {
   utils.log('Optimizing the javascript, css, html .');
 
-  var assets = $.useref.assets({searchPath : './src/client/'});
+  var assets = $.useref.assets({searchPath: './src/client/'});
   var cssFilter = $.filter('**/*.css');
   var jsLibFilter = $.filter('**/lib.js');
   var jsAppFilter = $.filter('**/app.js');
@@ -164,5 +164,4 @@ gulp.task('bump', function() {
  */
 gulp.task('build', ['optimize', 'images', 'fonts'], function() {
   utils.log('Building everything .');
-
 });
