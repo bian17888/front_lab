@@ -1,9 +1,9 @@
 {
-  "name": "Work-Spa",
+  "name": "beacon-spa",
   "version": "0.0.1",
-  "description": "for work",
+  "description": "angular快速开发架构 - base on @johnPapa clean-code",
   "authors": [
-    "Beck Bian"
+    "kai bian"
   ],
   "main": "",
   "moduleType": [],
