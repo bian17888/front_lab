@@ -31,7 +31,7 @@ gulp.task('clean-styles', function() {
   utils.clean(config.tmp + '**/*.css');
 });
 gulp.task('clean-images', function() {
-  utils.clean(config.build + 'images/**/*.*');
+  utils.clean(config.buildContent + 'images/**/*.*');
 });
 gulp.task('clean-fonts', function() {
   utils.clean(config.build + 'fonts/**/*.*');

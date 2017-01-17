@@ -52,7 +52,7 @@ gulp.task('images', ['clean-images'], function() {
   return gulp
     .src(config.images)
     .pipe($.imagemin({optimizationLevel: 4}))
-    .pipe(gulp.dest(config.build + 'content/images'));
+    .pipe(gulp.dest(config.buildContent + 'images'));
 });
 
 gulp.task('fonts', ['clean-fonts'], function() {

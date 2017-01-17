@@ -15,6 +15,7 @@ module.exports = function() {
     client: client,
     tmp: tmp,
     build: build,
+    buildContent: build + 'content/',
 
     /**
      * node env
