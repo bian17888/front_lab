@@ -7,6 +7,7 @@ module.exports = function() {
 
   var client = './src/client/',
     clientApp = client + 'app/',
+    clientContent = client + 'content/',
     tmp = client + '_tmp/',
     build = './build/';
 
@@ -30,17 +31,20 @@ module.exports = function() {
     index: client + 'index.html',
     htmltemplates: clientApp + '**/*.html',
     html: clientApp + '**/*.html',
-    alljs: ['./src/**/*.js', './*.js'],
     stylus: client + 'styles/**/*.styl',
     css: tmp + 'styles/**/*.css',
+    // alljs 用于 jscs + jshint
+    alljs: [
+      './gulp/**/*.js',
+      clientApp + '**/*.js'
+    ],
     js: [
       clientApp + '**/*.module.js',
       clientApp + '**/*.js',
-      tmp + '*.js',
       '!' + clientApp + '**/*.spec.js'
     ],
-    images: client + 'images/**/*.*',
-    fonts: client + 'fonts/**/*.*',
+    images: clientContent + 'images/**/*.*',
+    fonts: clientContent + 'fonts/**/*.*',
 
     /**
      * templateCache
@@ -51,7 +55,6 @@ module.exports = function() {
         root: 'app/',
         module: 'app.core',
         standAlone: false
-
       }
     },
     /**

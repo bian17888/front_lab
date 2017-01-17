@@ -11,15 +11,31 @@
     .module('app.avengers')
     .controller('Avengers', Avengers);
 
-  Avengers.$inject = ['logger'];
+  Avengers.$inject = ['dataservice', 'logger'];
 
   /* @ngInject */
-  function Avengers(logger) {
+  function Avengers(dataservice, logger) {
     var vm = this;
+    vm.avengers = [];
+    vm.title = 'avengers html !';
 
-    vm.text = 'avengers html !';
+    activate();
 
-    logger.success(' avengers page !');
+    //////////////////////////////////////////////////
+
+    function activate() {
+      var promises = [getAvengers()];
+      return dataservice.ready(promises).then(function() {
+        logger.success('Activated Avengers View');
+      });
+    }
+
+    function getAvengers () {
+      return dataservice.getAvengers().then(function(data){
+        vm.avengers = data.data;
+        return vm.avengers;
+      });
+    }
 
   }
 

@@ -1,1 +1,7 @@
-<p> {{ vm.text }}</p>
+<p> {{ vm.title }}</p>
+
+<ul>
+	<li ng-repeat="val in vm.avengers">
+		name : {{ val.name }} ----- character : {{ val.character }}
+	</li>
+</ul>

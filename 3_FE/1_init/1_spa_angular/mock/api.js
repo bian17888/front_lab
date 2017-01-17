@@ -4,7 +4,8 @@
  */
 
 module.exports = {
-    'articles/recommend': require('./articles/recommend').response,
+    'api/avengers': require('./avengers/list').response,
+    'api/films': require('./films/list').response,
     // mock post 请求
-    'send-auth-code': require('./other').response
-}
+    'api.other': require('./other').response
+};

@@ -15,23 +15,39 @@
     .module('app.dashboard')
     .controller('Dashboard', Dashboard);
 
-  function Dashboard() {
-    var vm = this;
+  Dashboard.$inject = ['logger', 'dataservice'];
 
-    vm.items = [
-      {
-        id: 0,
-        name: 'bb'
-      },
-      {
-        id: 1,
-        name: 'cc'
-      },
-      {
-        id: 0,
-        name: 'bb'
-      }
-    ]
+  function Dashboard(logger, dataservice) {
+    var vm = this;
+    vm.title = 'dashboard html !';
+    vm.avengers = [];
+    vm.films = [];
+
+    activate();
+
+    //////////////////////////////////////////////////
+
+    function activate() {
+      var promises = [getAvengers(), getFilms()];
+      return dataservice.ready(promises).then(function() {
+        logger.success('Dashboard View Success!');
+      });
+    }
+
+    function getAvengers() {
+      dataservice.getAvengers().then(function(data) {
+        vm.avengers = data.data;
+        return vm.avengers;
+      });
+    }
+
+    function getFilms() {
+      dataservice.getFilms().then(function(data) {
+        vm.films = data.data;
+        return vm.films;
+      });
+    }
+
   }
 
 })();

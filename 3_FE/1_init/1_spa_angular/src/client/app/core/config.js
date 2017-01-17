@@ -9,9 +9,20 @@
 
   var core = angular.module('app.core');
 
+  /**
+   * 全局设置
+   */
+  var config = {
+    appErrorPrefix: '[Beacon-NG Error] ', //Configure the exceptionHandler decorator
+    appTitle: 'Beacon-NG',
+    version: '0.0.1'
+  };
+
+  core.value('config', config);
+
 
   /**
-   * toastr : 消息通知配置
+   * config 配置 : toastr通知
    */
   core.config(toastrConfig);
 
@@ -25,11 +36,10 @@
 
 
   /**
-   *
+   * config 配置
    */
   core.config(configure);
 
-  // $logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider
   configure.$inject = ['$logProvider', '$routeProvider', 'routehelperConfigProvider', 'exceptionHandlerProvider'];
 
   /* @ngInject */
@@ -41,34 +51,21 @@
 
     // Configure the common route provider
     routehelperConfigProvider.config.$routeProvider = $routeProvider;
-    routehelperConfigProvider.config.docTitle = 'NG-Modular';
+    routehelperConfigProvider.config.docTitle = 'Beacon-NG';
 
-    // todo : resolveAlways
-    //var resolveAlways = { /* @ngInject */
-    //  ready: function(dataservice) {
-    //    return dataservice.ready();
-    //  }
-    //  // ready: ['dataservice', function (dataservice) {
-    //  //    return dataservice.ready();
-    //  // }]
-    //};
-    //routehelperConfigProvider.config.resolveAlways = resolveAlways;
+    var resolveAlways = { /* @ngInject */
+      //ready: function(dataservice) {
+      //  return dataservice.ready();
+      //}
+       ready: ['dataservice', function (dataservice) {
+          return dataservice.ready();
+       }]
+    };
+    routehelperConfigProvider.config.resolveAlways = resolveAlways;
 
     // Configure the common exception handler
     exceptionHandlerProvider.configure(config.appErrorPrefix);
 
   }
-
-
-  /**
-   * 全局设置
-   */
-  var config = {
-    appErrorPrefix: '[NG-Modular Error] ', //Configure the exceptionHandler decorator
-    appTitle: 'Angular Modular Demo',
-    version: '1.0.0'
-  };
-
-  core.value('config', config);
 
 })();

@@ -1,6 +1,6 @@
 /**
  * @fileOverview
- * @author bian17888 16/7/14 10:09
+ * @author bian17888 17/01/11 18:17
  */
 
 // Include in index.html so that app level exceptions are handled.
@@ -19,22 +19,20 @@
    * @return {[type]}
    */
   function exceptionHandlerProvider() {
+    var self = this;
     /* jshint validthis:true */
     this.config = {
       appErrorPrefix: undefined
     };
-
-    this.configure = function (appErrorPrefix) {
-      this.config.appErrorPrefix = appErrorPrefix;
+    this.configure = function(appErrorPrefix) {
+      self.config.appErrorPrefix = appErrorPrefix;
     };
-
     this.$get = function() {
-      return {config: this.config};
+      return {config: self.config};
     };
   }
 
 
-  config.$inject = ['$provide'];
   /**
    * Configure by setting an optional string value for appErrorPrefix.
    * Accessible via config.appErrorPrefix (via config value).
@@ -42,11 +40,12 @@
    * @return {[type]}
    * @ngInject
    */
+  config.$inject = ['$provide'];
+
   function config($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
   }
 
-  extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];
   /**
    * Extend the $exceptionHandler service to also display a toast.
    * @param  {Object} $delegate
@@ -54,11 +53,14 @@
    * @param  {Object} logger
    * @return {Function} the decorated $exceptionHandler service
    */
-  function extendExceptionHandler($delegate, exceptionHandler, logger) {
+  extendExceptionHandler.$inject = ['$delegate', 'logger', 'exceptionHandler'];
+
+  function extendExceptionHandler($delegate, logger, exceptionHandler) {
     return function(exception, cause) {
-      var appErrorPrefix = exceptionHandler.config.appErrorPrefix || '';
+      var appErrorPrefix = exceptionHandler.config.appErrorPrefix;
       var errorData = {exception: exception, cause: cause};
       exception.message = appErrorPrefix + exception.message;
+
       $delegate(exception, cause);
       /**
        * Could add the error to a service's collection,
@@ -72,4 +74,6 @@
       logger.error(exception.message, errorData);
     };
   }
+
+
 })();

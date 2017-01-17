@@ -52,7 +52,7 @@ gulp.task('images', ['clean-images'], function() {
   return gulp
     .src(config.images)
     .pipe($.imagemin({optimizationLevel: 4}))
-    .pipe(gulp.dest(config.build + 'images'));
+    .pipe(gulp.dest(config.build + 'content/images'));
 });
 
 gulp.task('fonts', ['clean-fonts'], function() {
@@ -96,6 +96,7 @@ gulp.task('optimize', ['templatecache', 'inject'], function() {
   utils.log('Optimizing the javascript, css, html .');
 
   var assets = $.useref.assets({searchPath: './src/client/'});
+  var templateCache = config.tmp + config.templateCache.file;
   var cssFilter = $.filter('**/*.css');
   var jsLibFilter = $.filter('**/lib.js');
   var jsAppFilter = $.filter('**/app.js');
@@ -103,6 +104,12 @@ gulp.task('optimize', ['templatecache', 'inject'], function() {
   return gulp
     .src(config.index)
     .pipe($.plumber())
+    // 加入 angular templateCache.js
+    .pipe($.inject(
+      gulp.src(templateCache, {read : false}), {
+        ignorePath: '/src/client',
+        starttag: '<!-- inject:templates:{{ext}} -->'
+    }))
     .pipe(assets)
     // 过滤,压缩 : css js 文件 (start)
     .pipe(cssFilter)

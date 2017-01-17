@@ -1,5 +1,16 @@
-<h2>ngRepeat</h2>
+<h2>{{ vm.title }}</h2>
+
+<h4>avengers</h4>
 <ul>
-    <input type="text" ng-model="q">
-    <li class="animate-repeat" ng-repeat="item in vm.items | filter:q | orderBy:'-id' as results ">{{ item.id }} : {{ item.name }}</li>
+	<li ng-repeat="val in vm.avengers">
+		name : {{ val.name }} ----- character : {{ val.character }}
+	</li>
+</ul>
+
+<h4>films</h4>
+<ul>
+	<li ng-repeat="val in vm.films">
+		<p>Title : {{ val.Title }} ----- Language : {{ val.Language }}</p>
+		<p><img ng-src="{{ val.Poster }}" alt=""></p>
+	</li>
 </ul>
