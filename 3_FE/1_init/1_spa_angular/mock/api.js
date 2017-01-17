@@ -4,5 +4,8 @@
  */
 
 module.exports = {
-  'articles/recommend' : require('./articles/recommend').response
-}
+    'api/avengers': require('./avengers/list').response,
+    'api/films': require('./films/list').response,
+    // mock post 请求
+    'api.other': require('./other').response
+};

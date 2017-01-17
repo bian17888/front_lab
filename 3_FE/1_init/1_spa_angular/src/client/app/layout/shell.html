@@ -10,18 +10,19 @@
         <!-- 左侧导航 -->
         <nav class="nav-left" ng-include="'app/layout/sidebar.html'"></nav>
 
-        <!-- 内容区 -->
+        <!-- 内容区 ng-view -->
         <section ng-view class="main-content"></section>
 
-        <!-- loading 效果 -->
-        <div ngplus-overlay
-             ngplus-overlay-delay-in="50"
-             ngplus-overlay-delay-out="700"
-             >
-            <img src="/images/busy.gif"/>
-            <div class="page-spinner-message overlay-message">{{ vm.busyMessage }}</div>
-        </div>
-
     </article>
+
+
+    <!-- update the browser (IE<10) -->
+    <section ng-include="'app/layout/browsehappy.html'"></section>
+
+	<!-- splash-page : 启动页遮罩效果 -->
+	<section ng-include="'app/layout/splash.html'"></section>
+
+    <!-- loading 效果 -->
+	<section ng-include="'app/layout/ngplus.html'"></section>
 
 </div>

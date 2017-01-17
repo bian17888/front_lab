@@ -11,15 +11,14 @@
     .module('app.layout')
     .controller('Shell', Shell);
 
-  Shell.$inject = ['$timeout', 'config', 'logger'];
+  Shell.$inject = ['$timeout', 'config', 'logger', 'dataservice'];
 
-  function Shell($timeout, config, logger) {
+  function Shell($timeout, config, logger, dataservice) {
     /*jshint validthis: true */
     var vm = this;
 
     vm.title = config.appTitle;
-    vm.busyMessage = 'Please wait ...';
-    vm.isBusy = true;   //todo : 确定和哪有关联?
+    vm.showSplash = true;
 
     activate();
 
@@ -30,11 +29,16 @@
      * @desc 初始化信息
      */
     function activate() {
-      logger.success(config.appTitle + ' loaded!', null);
-//    Using a resolver on all routes or dataservice.ready in every controller
-//      dataservice.ready().then(function() {
-//        hideSplash();
-//      });
+      logger.info(config.appTitle + ' loaded!', null);
+      dataservice.ready().then(function() {
+        hideSplash();
+      });
+    }
+
+    function hideSplash() {
+      $timeout(function() {
+        vm.showSplash = false;
+      }, 1000);
     }
   }
 })();

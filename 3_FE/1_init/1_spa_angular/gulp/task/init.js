@@ -52,7 +52,7 @@ gulp.task('images', ['clean-images'], function() {
   return gulp
     .src(config.images)
     .pipe($.imagemin({optimizationLevel: 4}))
-    .pipe(gulp.dest(config.build + 'images'));
+    .pipe(gulp.dest(config.build + 'content/images'));
 });
 
 gulp.task('fonts', ['clean-fonts'], function() {
@@ -61,19 +61,19 @@ gulp.task('fonts', ['clean-fonts'], function() {
   return gulp
     .src(config.fonts)
     .pipe(gulp.dest(config.build + 'fonts'));
-})
+});
 
 /**
  * wiredep : install bower's lib
  */
-gulp.task('wiredep', ['templatecache'], function() {
-  utils.log('Wire up bower css js and app js into the html .')
+gulp.task('wiredep', function() {
+  utils.log('Wire up bower css js and app js into the html .');
   var options = config.getWiredepDefaultOptions();
 
   return gulp
     .src(config.index)
     .pipe(wiredep(options))
-    .pipe($.inject(gulp.src(config.js),{ignorePath : '/src/client'}))
+    .pipe($.inject(gulp.src(config.js), {ignorePath: '/src/client'}))
     .pipe(gulp.dest(config.client));
 });
 
@@ -81,21 +81,22 @@ gulp.task('wiredep', ['templatecache'], function() {
  * inject : install custom css
  */
 gulp.task('inject', ['wiredep', 'styles'], function() {
-  utils.log('Inject Custom Css into the html .')
+  utils.log('Inject Custom Css into the html .');
 
   return gulp
     .src(config.index)
-    .pipe($.inject(gulp.src(config.css),{ignorePath : '/src/client'}))
+    .pipe($.inject(gulp.src(config.css), {ignorePath: '/src/client'}))
     .pipe(gulp.dest(config.client));
 });
 
 /**
  * optimize : combine files
  */
-gulp.task('optimize', ['inject'], function() {
+gulp.task('optimize', ['templatecache', 'inject'], function() {
   utils.log('Optimizing the javascript, css, html .');
 
-  var assets = $.useref.assets({searchPath : './src/client/'});
+  var assets = $.useref.assets({searchPath: './src/client/'});
+  var templateCache = config.tmp + config.templateCache.file;
   var cssFilter = $.filter('**/*.css');
   var jsLibFilter = $.filter('**/lib.js');
   var jsAppFilter = $.filter('**/app.js');
@@ -103,6 +104,12 @@ gulp.task('optimize', ['inject'], function() {
   return gulp
     .src(config.index)
     .pipe($.plumber())
+    // 加入 angular templateCache.js
+    .pipe($.inject(
+      gulp.src(templateCache, {read : false}), {
+        ignorePath: '/src/client',
+        starttag: '<!-- inject:templates:{{ext}} -->'
+    }))
     .pipe(assets)
     // 过滤,压缩 : css js 文件 (start)
     .pipe(cssFilter)
@@ -164,5 +171,4 @@ gulp.task('bump', function() {
  */
 gulp.task('build', ['optimize', 'images', 'fonts'], function() {
   utils.log('Building everything .');
-
 });

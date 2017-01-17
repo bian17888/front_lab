@@ -15,6 +15,7 @@
 
   // Must configure via the routehelperConfigProvider
   function routehelperConfig() {
+    var self = this;
     /* jshint validthis:true */
     this.config = {
       // These are the properties we need to set
@@ -25,15 +26,15 @@
 
     this.$get = function() {
       return {
-        config: this.config
-      }
-    }
+        config: self.config
+      };
+    };
   }
 
   function routehelper($location, $rootScope, $route, logger, routehelperConfig) {
     var handlingRouteChangeError = false;
     var routeCounts = {
-      error: 0,
+      errors: 0,
       changes: 0
     };
     var routes = [];
@@ -48,6 +49,7 @@
     init();
 
     return service;
+
     //////////////////////////////////////////////////
 
     function configureRoutes(routes) {
@@ -59,49 +61,53 @@
     }
 
     function getRoutes() {
-      for (var prop in $route.routes) {
-        if ($route.routes.hasOwnProperty(prop)) {
-          var route = $route.routes[prop];
+      var _routes = $route.routes;
+
+      for (var prop in _routes) {
+        if (_routes.hasOwnProperty(prop)) {
+          var route = _routes[prop];
           var isRoute = !!route.title;
           if (isRoute) {
             routes.push(route);
           }
         }
       }
+
       return routes;
     }
 
     function init() {
-      handleRoutingErrors();
       updateDocTitle();
-    }
-
-    function handleRoutingErrors() {
-      // Route cancellation:
-      // On routing error, go to the dashboard.
-      // Provide an exit clause if it tries to do it twice.
-      $rootScope.$on('$routeChangeError', function(event, current, previous, rejection) {
-        if (handlingRouteChangeError) return;
-        routeCounts.error++;
-        handlingRouteChangeError = true;
-        var destination = (current && (current.title || current.name || current.loadedTemplateUrl)) ||
-          'unknown target';
-        var msg = 'Error routing to ' + destination + '. ' + (rejection.msg || '');
-        logger.warning(msg, [current]);
-        $location.path('/');
-      })
+      handleRoutingErrors();
     }
 
     function updateDocTitle() {
-      $rootScope.$on('$routeChangeSuccess',
-        function(event, current, previous) {
-          routeCounts.changes++;
-          handlingRouteChangeError = false;
-          var title = routehelperConfig.config.docTitle + ' ' + (current.title || '');
-          $rootScope.title = title; // data bind to <title>
-        }
-      );
+      $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+        handlingRouteChangeError = false;
+        routeCounts.changes++;
+        $rootScope.title = routehelperConfig.config.docTitle + ' ' + (current.title || '');
+      });
     }
+
+    function handleRoutingErrors() {
+      $rootScope.$on('$routeChangeError', function(event, current, previous, rejection) {
+        var destination = '';
+        var msg = '';
+
+        if (handlingRouteChangeError) {
+          return;
+        }
+        handlingRouteChangeError = true;
+        routeCounts.errors++;
+        destination = (current && (current.title || current.name || current.loadedTemplateUrl) ) || 'unknown target';
+        msg = 'Error routing to ' + destination + '.' + (rejection.msg || '');
+
+        logger.warning(msg, [current]);
+        $location.path('/');
+
+      });
+    }
+
 
   }
 
