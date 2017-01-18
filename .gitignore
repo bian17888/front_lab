@@ -18,6 +18,7 @@
 **/node_modules/
 **/build/
 **/_tmp/
+**/*.xmind
 
 ### 2_mpa_requirejs (多页静态应用) ###
 **/1_mpa_requirejs/**/node_modules/
