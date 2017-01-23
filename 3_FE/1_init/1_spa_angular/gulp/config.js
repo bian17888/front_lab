@@ -3,8 +3,7 @@
  * @author bian17888 16/4/25 07:57
  */
 
-module.exports = function() {
-
+module.exports = function () {
   var client = './src/client/',
     clientApp = client + 'app/',
     clientContent = client + 'content/',
@@ -76,7 +75,7 @@ module.exports = function() {
 
   };
 
-  config.getWiredepDefaultOptions = function() {
+  config.getWiredepDefaultOptions = function () {
     var options = {
       directory: config.bower.directory,
       bowerJson: config.bower.bowerJson,
@@ -87,7 +86,5 @@ module.exports = function() {
 
   return config;
 
-  //////////////////////////////////////////////////
-
-
+  // ////////////////////////////////////////////////
 };

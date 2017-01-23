@@ -6,7 +6,6 @@
 // third parts
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({lazy: true});
-var stylish = require('jshint-stylish');
 var args = require('yargs').argv;
 
 // user define
@@ -22,11 +21,11 @@ gulp.task('help', $.taskListing);
 /**
  * vet : js语法风格 + 错误检测
  */
-gulp.task('vet', function() {
+gulp.task('vet', function () {
   utils.log('Analyzing source with jshint and jscs .');
 
   return gulp
     .src(config.alljs)
-    .pipe($.if(args.verbose, $.print()))    // 执行 : gulp vet --verbose ; 打印.src()文件路径
+    .pipe($.if(args.verbose, $.print()));    // 执行 : gulp vet --verbose ; 打印.src()文件路径
 });
 

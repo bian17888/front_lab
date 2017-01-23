@@ -9,7 +9,6 @@ var fs = require('fs');
 var gulp = require('gulp');
 var GulpSSH = require('gulp-ssh');
 var exec = require('child_process').exec;
-var config = require('../config');
 
 var sshConfig = {
   host: '10.101.88.14',
@@ -23,7 +22,7 @@ var gulpSSH = new GulpSSH({
 });
 
 // tolight : fixed gulp-ssh 多个文件 error 问题, 目前采用上传 .tar 的形式
-gulp.task('deploy', ['deploy:copy'], function() {
+gulp.task('deploy', ['deploy:copy'], function () {
   return gulpSSH
     .shell([
       // 备份 SandTable -> backup/SandTable_20160909.tar
@@ -41,21 +40,21 @@ gulp.task('deploy', ['deploy:copy'], function() {
     .pipe(gulp.dest('logs'));
 });
 
-gulp.task('deploy:copy', ['deploy:clean'], function() {
+gulp.task('deploy:copy', ['deploy:clean'], function () {
   return gulp
   // tolight : 此处拷贝文件夹方法
     .src(['./build_new.tar'])
     .pipe(gulpSSH.dest('/www/sandtable.alibaba-inc.com/backup'));
 });
 
-gulp.task('deploy:clean', ['deploy:tar'], function() {
+gulp.task('deploy:clean', ['deploy:tar'], function () {
   return gulpSSH
     .shell(['cd /www/sandtable.alibaba-inc.com/backup', 'rm -rf build_new.tar'])
     .pipe(gulp.dest('logs'));
 });
 
-gulp.task('deploy:tar', function(cb) {
-  exec('tar -cf build_new.tar build/', function(err, stdout, stderr) {
+gulp.task('deploy:tar', function (cb) {
+  exec('tar -cf build_new.tar build/', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);

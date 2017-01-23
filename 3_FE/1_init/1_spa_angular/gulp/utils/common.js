@@ -3,8 +3,7 @@
  * @author bian17888 16/4/26 09:55
  */
 
-module.exports = function() {
-
+module.exports = function () {
   var url = require('url');
   // third parts
   var $ = require('gulp-load-plugins')({lazy: true});
@@ -26,14 +25,15 @@ module.exports = function() {
 
   return utils;
 
-  //////////////////////////////////////////////////
+  // ////////////////////////////////////////////////
 
   /**
    * @func log
-   * @param {(string|object)} mgs - 日志信息
+   * @param {(string|object)} msg - 日志信息
+   * @returns {void}
    */
   function log(msg) {
-    if (typeof(msg) === 'object') {
+    if (typeof (msg) === 'object') {
       for (var item in msg) {
         if (msg.hasOwnProperty(item)) {
           $.util.log($.util.colors.blue(msg[item]));
@@ -48,6 +48,7 @@ module.exports = function() {
    * @func clean
    * @desc 用同步删除, 防止异步的 bug
    * @param {(string|object)} path - 文件路径
+   * @returns {void}
    */
   function clean(path) {
     log('Cleaning : ' + path);
@@ -57,6 +58,7 @@ module.exports = function() {
   /**
    * @func errorLogger
    * @param {object} error - 错误信息
+   * @returns {void}
    */
   function errorLogger(error) {
     log('*** Start of Error ***');
@@ -69,6 +71,7 @@ module.exports = function() {
    * @func changeEvent
    * @desc 显示改动文件信息
    * @param {objec} event - event
+   * @returns {void}
    */
   // todo : 用正则截取文件路径
   function changeEvent(event) {
@@ -79,9 +82,9 @@ module.exports = function() {
    * @func serve
    * @desc 启动 server
    * @param {boolean} isDev - 开发模式
+   * @returns {void}
    */
   function serve(isDev) {
-
     if (browserSync.active) {
       return;
     }
@@ -120,13 +123,12 @@ module.exports = function() {
       notify: true,
       reloadDelay: config.browserReloadDelay,
       middleware: config.env.mock === 'true' ? [mockData] : []
-    }
+    };
 
     browserSync.init(options);
-
   }
 
-  //////////////////////////////////////////////////
+  // ////////////////////////////////////////////////
 
   function mockData(req, res, next) {
     var theUrl = url.parse(req.url);
@@ -136,15 +138,13 @@ module.exports = function() {
     if (json) {
       json = json();
       json = JSON.stringify(json);
-      setTimeout(function() {
+      setTimeout(function () {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(json, 'utf8');
         res.end();
-      }, 500)
+      }, 500);
     } else {
       next();
     }
-
   }
-
 };

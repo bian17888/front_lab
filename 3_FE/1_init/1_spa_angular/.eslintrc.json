@@ -9,9 +9,20 @@
   ],
   "rules": {
     "no-console": "off",
+    "one-var": [
+      "off",
+      {
+        "var": "always",
+        "let": "never",
+        "const": "never"
+      }
+    ],
     "func-names": "off",
-
-    "angular/module-getter" : "off",
+    "angular/log": "warn",
+    "angular/typecheck-object": "warn",
+    "angular/json-functions": "warn",
+    "angular/timeout-service": "warn",
+    "angular/module-getter": "warn",
     "angular/controller-name": [
       "off",
       "/^[A-Z].*/"

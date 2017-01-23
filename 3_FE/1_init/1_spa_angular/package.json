@@ -14,7 +14,7 @@
     "init": "npm install",
     "install": "bower install",
     "start": "node src/server/app.js",
-    "test": "./node_modules/.bin/eslint"
+    "test": "./node_modules/.bin/eslint ./gulp && echo '---- finish -----' "
   },
   "pre-commit": [
     "test"

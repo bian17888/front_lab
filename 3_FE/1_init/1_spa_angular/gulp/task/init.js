@@ -14,7 +14,7 @@ var utils = require('../utils/common')();
 var config = require('../config')();
 
 
-gulp.task('templatecache', ['clean-code'], function() {
+gulp.task('templatecache', ['clean-code'], function () {
   utils.log('Creating AngularJS $templateCache');
 
   return gulp
@@ -25,19 +25,18 @@ gulp.task('templatecache', ['clean-code'], function() {
       config.templateCache.options
     ))
     .pipe(gulp.dest(config.tmp));
-
 });
 
 /**
  * styles : 编译.styl --> .css
  */
-gulp.task('styles', ['clean-styles'], function() {
+gulp.task('styles', ['clean-styles'], function () {
   utils.log('Compiling Stylus --> Css .');
 
   return gulp
     .src(config.stylus)
     .pipe($.stylus())
-    //.on('error', utils.errorLogger) // 优雅方案 : $.plumber()
+    // .on('error', utils.errorLogger) // 优雅方案 : $.plumber()
     .pipe($.plumber())
     .pipe($.autoprefixer({browsers: ['> 0.1%', 'not ie < 9']}))
     .pipe(gulp.dest(config.tmp + 'styles/'));
@@ -46,7 +45,7 @@ gulp.task('styles', ['clean-styles'], function() {
 /**
  * image : 复制并压缩图片
  */
-gulp.task('images', ['clean-images'], function() {
+gulp.task('images', ['clean-images'], function () {
   utils.log('Copying and compressing the images');
 
   return gulp
@@ -55,7 +54,7 @@ gulp.task('images', ['clean-images'], function() {
     .pipe(gulp.dest(config.buildContent + 'images'));
 });
 
-gulp.task('fonts', ['clean-fonts'], function() {
+gulp.task('fonts', ['clean-fonts'], function () {
   utils.log('Copying the fonts');
 
   return gulp
@@ -66,7 +65,7 @@ gulp.task('fonts', ['clean-fonts'], function() {
 /**
  * wiredep : install bower's lib
  */
-gulp.task('wiredep', function() {
+gulp.task('wiredep', function () {
   utils.log('Wire up bower css js and app js into the html .');
   var options = config.getWiredepDefaultOptions();
 
@@ -80,7 +79,7 @@ gulp.task('wiredep', function() {
 /**
  * inject : install custom css
  */
-gulp.task('inject', ['wiredep', 'styles'], function() {
+gulp.task('inject', ['wiredep', 'styles'], function () {
   utils.log('Inject Custom Css into the html .');
 
   return gulp
@@ -92,7 +91,7 @@ gulp.task('inject', ['wiredep', 'styles'], function() {
 /**
  * optimize : combine files
  */
-gulp.task('optimize', ['templatecache', 'inject'], function() {
+gulp.task('optimize', ['templatecache', 'inject'], function () {
   utils.log('Optimizing the javascript, css, html .');
 
   var assets = $.useref.assets({searchPath: './src/client/'});
@@ -106,10 +105,10 @@ gulp.task('optimize', ['templatecache', 'inject'], function() {
     .pipe($.plumber())
     // 加入 angular templateCache.js
     .pipe($.inject(
-      gulp.src(templateCache, {read : false}), {
+      gulp.src(templateCache, {read: false}), {
         ignorePath: '/src/client',
         starttag: '<!-- inject:templates:{{ext}} -->'
-    }))
+      }))
     .pipe(assets)
     // 过滤,压缩 : css js 文件 (start)
     .pipe(cssFilter)
@@ -143,7 +142,7 @@ gulp.task('optimize', ['templatecache', 'inject'], function() {
  * --type=major will bump the major version x.*.*
  * --version=1.2.3 will bump to a specific version and ignore other flags
  */
-gulp.task('bump', function() {
+gulp.task('bump', function () {
   var msg = 'Bumping versions ';
   var options = {};
   var type = args.type;
@@ -163,12 +162,11 @@ gulp.task('bump', function() {
     .pipe($.print())
     .pipe($.bump(options))
     .pipe(gulp.dest(config.root));
-
 });
 
 /**
  * build : optimize , copy images and fonts
  */
-gulp.task('build', ['optimize', 'images', 'fonts'], function() {
+gulp.task('build', ['optimize', 'images', 'fonts'], function () {
   utils.log('Building everything .');
 });
