@@ -2,8 +2,9 @@
  * @fileOverview
  * @author bian17888 16/5/1 09:50
  */
+/* eslint-disable angular/on-watch, no-shadow */
 
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -16,7 +17,6 @@
   // Must configure via the routehelperConfigProvider
   function routehelperConfig() {
     var self = this;
-    /* jshint validthis:true */
     this.config = {
       // These are the properties we need to set
       // $routeProvider: undefined
@@ -24,7 +24,7 @@
       // resolveAlways: {ready: function(){ } }
     };
 
-    this.$get = function() {
+    this.$get = function () {
       return {
         config: self.config
       };
@@ -50,10 +50,10 @@
 
     return service;
 
-    //////////////////////////////////////////////////
+    // ////////////////////////////////////////////////
 
     function configureRoutes(routes) {
-      routes.forEach(function(route) {
+      routes.forEach(function (route) {
         route.config.resolve = angular.extend(route.config.resolve || {}, routehelperConfig.config.resolveAlways);
         $routeProvider.when(route.url, route.config);
       });
@@ -82,7 +82,7 @@
     }
 
     function updateDocTitle() {
-      $rootScope.$on('$routeChangeSuccess', function(event, current, previous) {
+      $rootScope.$on('$routeChangeSuccess', function (event, current) {
         handlingRouteChangeError = false;
         routeCounts.changes++;
         $rootScope.title = routehelperConfig.config.docTitle + ' ' + (current.title || '');
@@ -90,7 +90,7 @@
     }
 
     function handleRoutingErrors() {
-      $rootScope.$on('$routeChangeError', function(event, current, previous, rejection) {
+      $rootScope.$on('$routeChangeError', function (event, current, previous, rejection) {
         var destination = '';
         var msg = '';
 
@@ -104,11 +104,7 @@
 
         logger.warning(msg, [current]);
         $location.path('/');
-
       });
     }
-
-
   }
-
 })();

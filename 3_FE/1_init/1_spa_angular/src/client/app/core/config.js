@@ -3,8 +3,7 @@
  * @author bian17888 16/5/1 09:23
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   var core = angular.module('app.core');
@@ -13,7 +12,7 @@
    * 全局设置
    */
   var config = {
-    appErrorPrefix: '[Beacon-NG Error] ', //Configure the exceptionHandler decorator
+    appErrorPrefix: '[Beacon-NG Error] ', // Configure the exceptionHandler decorator
     appTitle: 'Beacon-NG',
     version: '0.0.1'
   };
@@ -54,18 +53,16 @@
     routehelperConfigProvider.config.docTitle = 'Beacon-NG';
 
     var resolveAlways = { /* @ngInject */
-      //ready: function(dataservice) {
+      // ready: function(dataservice) {
       //  return dataservice.ready();
-      //}
-       ready: ['dataservice', function (dataservice) {
-          return dataservice.ready();
-       }]
+      // }
+      ready: ['dataservice', function (dataservice) {
+        return dataservice.ready();
+      }]
     };
     routehelperConfigProvider.config.resolveAlways = resolveAlways;
 
     // Configure the common exception handler
     exceptionHandlerProvider.configure(config.appErrorPrefix);
-
   }
-
 })();

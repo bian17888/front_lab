@@ -3,10 +3,8 @@
  * @author bian17888 16/5/31 20:10
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular.module('app.dashboard', []);
-
 })();

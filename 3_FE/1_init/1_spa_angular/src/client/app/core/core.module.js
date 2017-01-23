@@ -3,8 +3,7 @@
  * @author bian17888 16/5/1 09:23
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular
@@ -18,6 +17,5 @@
 
       /* 3rd-party modules */
       'ngplus', 'ui.bootstrap'
-    ])
-
+    ]);
 })();

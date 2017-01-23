@@ -22,15 +22,11 @@ gulp.task('help', $.taskListing);
 /**
  * vet : js语法风格 + 错误检测
  */
-gulp.task('vet', function(){
+gulp.task('vet', function() {
   utils.log('Analyzing source with jshint and jscs .');
 
   return gulp
     .src(config.alljs)
     .pipe($.if(args.verbose, $.print()))    // 执行 : gulp vet --verbose ; 打印.src()文件路径
-    .pipe($.jscs())
-    .pipe($.jshint())
-    .pipe($.jshint.reporter(stylish, { verbose: true }))
-    .pipe($.jshint.reporter('fail'));   // 任务失败, 报异常
 });
 

@@ -7,8 +7,7 @@
  * @author bian17888 16/5/11 21:19
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular
@@ -25,19 +24,18 @@
   function getRoutes() {
     return [
       {
-        url : '/',
-        config : {
-          templateUrl : 'app/dashboard/dashboard.html',
-          controller : 'Dashboard',
-          controllerAs : 'vm',
-          title : 'Dashboard',
-          settings : {
-            nav : 1,
-            content : '<i class="fa fa-dashboard"></i> Dashboard'
+        url: '/',
+        config: {
+          templateUrl: 'app/dashboard/dashboard.html',
+          controller: 'Dashboard',
+          controllerAs: 'vm',
+          title: 'Dashboard',
+          settings: {
+            nav: 1,
+            content: '<i class="fa fa-dashboard"></i> Dashboard'
           }
         }
       }
     ];
   }
-
 })();

@@ -7,8 +7,7 @@
  * @author bian17888 16/5/11 21:19
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular
@@ -25,29 +24,27 @@
 
     activate();
 
-    //////////////////////////////////////////////////
+    // ////////////////////////////////////////////////
 
     function activate() {
       var promises = [getAvengers(), getFilms()];
-      return dataservice.ready(promises).then(function() {
+      return dataservice.ready(promises).then(function () {
         logger.success('Dashboard View Success!');
       });
     }
 
     function getAvengers() {
-      dataservice.getAvengers().then(function(data) {
+      dataservice.getAvengers().then(function (data) {
         vm.avengers = data.data;
         return vm.avengers;
       });
     }
 
     function getFilms() {
-      dataservice.getFilms().then(function(data) {
+      dataservice.getFilms().then(function (data) {
         vm.films = data.data;
         return vm.films;
       });
     }
-
   }
-
 })();

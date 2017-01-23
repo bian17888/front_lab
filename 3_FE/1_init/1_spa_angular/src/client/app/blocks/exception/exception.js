@@ -3,7 +3,7 @@
  * @author bian17888 16/7/14 10:09
  */
 
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -20,7 +20,7 @@
     return service;
 
     function catcher(message) {
-      return function(reason) {
+      return function (reason) {
         logger.error(message, reason);
       };
     }

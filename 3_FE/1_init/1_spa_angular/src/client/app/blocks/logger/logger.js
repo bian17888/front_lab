@@ -3,7 +3,7 @@
  * @author bian17888 16/5/31 14:05
  */
 
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -14,20 +14,20 @@
 
   function logger($log, toastr) {
     var service = {
-      showToasts : true,
+      showToasts: true,
 
-      error : error,
-      info : info,
-      success : success,
-      warning : warning,
+      error: error,
+      info: info,
+      success: success,
+      warning: warning,
 
       // straight to console ; bypass toastr
-      log : $log.log
+      log: $log.log
     };
 
     return service;
 
-    //////////////////////////////////////////////////
+    // ////////////////////////////////////////////////
 
     function error(message, data, title) {
       toastr.error(message, title);
@@ -48,7 +48,5 @@
       toastr.warning(message, title);
       $log.warn('Warning : ' + message, data);
     }
-
   }
-
 })();

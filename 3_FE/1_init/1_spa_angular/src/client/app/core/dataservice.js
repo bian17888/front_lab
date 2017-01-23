@@ -3,7 +3,7 @@
  * @desc
  * @author bian17888 17/1/13 16:47
  */
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -14,7 +14,6 @@
 
   /* @ngInject */
   function dataservice($http, $location, $q, exception, logger) {
-
     var isPrimed = false;
     var primePromise;
 
@@ -26,11 +25,13 @@
 
     return service;
 
-    ////////////////
+    // //////////////
 
     /**
      * @func _commonAjax
      * @desc 通用方法
+     * @param {Object} config - $http config
+     * @returns {Object} $http promise
      */
     function _commonAjax(config) {
       var _config = {
@@ -43,7 +44,7 @@
 
       return $http(_config)
         .then(commonAjaxComplete)
-        .catch(function(message) {
+        .catch(function (message) {
           exception.catcher(errInfo)(message);
         });
 
@@ -71,7 +72,7 @@
       var readyPromise = primePromise || _prime();
 
       return readyPromise
-        .then(function() {
+        .then(function () {
           return $q.all(nextPromises);
         })
         .catch(exception.catcher(' ready function failed '));
@@ -79,7 +80,7 @@
 
     /**
      * @func getAvengers
-     * @desc
+     * @return {Object} getAvengers promise
      */
     function getAvengers() {
       var _config = {
@@ -91,7 +92,7 @@
 
     /**
      * @func getFilms
-     * @desc
+     * @return {Object} getFilms promise
      */
     function getFilms() {
       var _config = {
@@ -100,8 +101,6 @@
 
       return _commonAjax(_config);
     }
-
   }
-
 })();
 

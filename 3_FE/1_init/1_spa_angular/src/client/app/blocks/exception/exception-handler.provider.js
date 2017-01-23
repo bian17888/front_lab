@@ -5,7 +5,7 @@
 
 // Include in index.html so that app level exceptions are handled.
 // Exclude from testRunner.html which should run exactly what it wants to run
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -16,18 +16,18 @@
 
   /**
    * Must configure the exception handling
-   * @return {[type]}
+   * @return {void}
    */
   function exceptionHandlerProvider() {
     var self = this;
-    /* jshint validthis:true */
     this.config = {
+      // eslint-disable-next-line
       appErrorPrefix: undefined
     };
-    this.configure = function(appErrorPrefix) {
+    this.configure = function (appErrorPrefix) {
       self.config.appErrorPrefix = appErrorPrefix;
     };
-    this.$get = function() {
+    this.$get = function () {
       return {config: self.config};
     };
   }
@@ -56,7 +56,7 @@
   extendExceptionHandler.$inject = ['$delegate', 'logger', 'exceptionHandler'];
 
   function extendExceptionHandler($delegate, logger, exceptionHandler) {
-    return function(exception, cause) {
+    return function (exception, cause) {
       var appErrorPrefix = exceptionHandler.config.appErrorPrefix;
       var errorData = {exception: exception, cause: cause};
       exception.message = appErrorPrefix + exception.message;
@@ -74,6 +74,4 @@
       logger.error(exception.message, errorData);
     };
   }
-
-
 })();

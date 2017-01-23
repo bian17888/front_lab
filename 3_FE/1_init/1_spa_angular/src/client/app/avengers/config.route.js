@@ -7,8 +7,7 @@
  * @author bian17888 16/5/11 21:19
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular
@@ -39,5 +38,4 @@
       }
     ];
   }
-
 })();

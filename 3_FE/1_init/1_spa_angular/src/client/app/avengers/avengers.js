@@ -3,8 +3,7 @@
  * @author bian17888 16/5/31 20:10
  */
 
-(function() {
-
+(function () {
   'use strict';
 
   angular
@@ -21,22 +20,20 @@
 
     activate();
 
-    //////////////////////////////////////////////////
+    // ////////////////////////////////////////////////
 
     function activate() {
       var promises = [getAvengers()];
-      return dataservice.ready(promises).then(function() {
+      return dataservice.ready(promises).then(function () {
         logger.success('Activated Avengers View');
       });
     }
 
-    function getAvengers () {
-      return dataservice.getAvengers().then(function(data){
+    function getAvengers() {
+      return dataservice.getAvengers().then(function (data) {
         vm.avengers = data.data;
         return vm.avengers;
       });
     }
-
   }
-
 })();
