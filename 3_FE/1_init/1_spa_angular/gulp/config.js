@@ -33,7 +33,7 @@ module.exports = function () {
     html: clientApp + '**/*.html',
     stylus: client + 'styles/**/*.styl',
     css: tmp + 'styles/**/*.css',
-    // alljs 用于 jscs + jshint
+    // alljs : 用于 eslint 语法检测
     alljs: [
       './gulp/**/*.js',
       clientApp + '**/*.js'
@@ -71,7 +71,15 @@ module.exports = function () {
     packages: [
       './package.json',
       './bower.json'
-    ]
+    ],
+
+    /**
+     * jsdoc
+     */
+    jsdoc: {
+      bin: './node_modules/.bin/jsdoc ',
+      path : './jsdoc/'
+    }
 
   };
 
@@ -85,6 +93,4 @@ module.exports = function () {
   };
 
   return config;
-
-  // ////////////////////////////////////////////////
 };

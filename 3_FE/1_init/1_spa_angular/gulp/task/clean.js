@@ -14,7 +14,7 @@ var config = require('../config')();
  * clean-** : 删除文件
  */
 gulp.task('clean', function () {
-  var delConfig = [].concat(config.tmp, config.build);
+  var delConfig = [].concat(config.tmp, config.build, config.jsdoc.path);
   utils.clean(delConfig);
 });
 gulp.task('clean-code', function () {
@@ -33,4 +33,7 @@ gulp.task('clean-images', function () {
 });
 gulp.task('clean-fonts', function () {
   utils.clean(config.build + 'fonts/**/*.*');
+});
+gulp.task('clean-jsdoc', function () {
+  utils.clean(config.jsdoc.path);
 });

@@ -3,6 +3,9 @@
  * @author bian17888 16/4/25 10:00
  */
 
+var fs = require('fs');
+var exec = require('child_process').exec;
+
 // third parts
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({lazy: true});
@@ -30,4 +33,27 @@ gulp.task('vet', function () {
     .pipe($.if(args.verbose, $.print()))
     .pipe($.eslint())
     .pipe($.eslint.failAfterError());
+});
+
+/**
+ * jsdoc : jsdoc文档
+ */
+gulp.task('jsdoc', function (cb) {
+  utils.log('Creating docs with jsdoc .');
+
+  var names = fs.readdirSync('./src');
+
+  names.forEach(function (name) {
+    // 当name === client时, 路径为 client/app ; 否则为server/
+    var _source = ' -r ./src/' + name + (name === 'client' ? '/app' : ''),
+      _destination = ' -d ./jsdoc/' + name,
+    // _docConfig 包含的参数 : --readme -r -d
+      _docConfig = ' --readme ./README.md ' + _source + _destination;
+
+    exec(config.jsdoc.bin + _docConfig, function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      cb(err);
+    });
+  });
 });
