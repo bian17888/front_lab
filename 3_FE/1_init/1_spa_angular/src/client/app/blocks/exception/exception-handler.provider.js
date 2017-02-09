@@ -36,8 +36,8 @@
   /**
    * Configure by setting an optional string value for appErrorPrefix.
    * Accessible via config.appErrorPrefix (via config value).
-   * @param  {[type]} $provide
-   * @return {[type]}
+   * @param  {Object[]} $provide
+   * @return {Object[]}
    * @ngInject
    */
   config.$inject = ['$provide'];

@@ -1,6 +1,6 @@
 /**
  * @fileOverview dataservice
- * @desc
+ * @desc dataservice
  * @author bian17888 17/1/13 16:47
  */
 (function () {
