@@ -11,7 +11,7 @@
     "url": "https://github.com/johnpapa/pluralsight-gulp.git"
   },
   "scripts": {
-    "init": "npm install",
+    "init": "tnpm install",
     "install": "bower install",
     "start": "node src/server/app.js",
     "test": "./node_modules/.bin/eslint ./gulp && echo '---- finish -----' "
@@ -54,8 +54,6 @@
     "gulp-useref": "^1.1.2",
     "gulp-util": "~3.0.7",
     "jsdoc": "^3.4.3",
-    "jshint": "~2.9.2",
-    "jshint-stylish": "~2.1.0",
     "pre-commit": "^1.2.2",
     "require-dir": "^0.3.0",
     "wiredep": "~4.0.0",
