@@ -106,7 +106,16 @@
 
 ## 三 线上环境
 
-## 四 todo
+## 四 架构说明
+
+- debug 模式
+
+开关 - config.js -> debug: true
+会控制 logger.js -> logger.info()的显隐
+
+## 五 todo
 
 - 单元测试
 - 持续集成
+- 优化
+    - 初始化 hideSplash 遮罩层

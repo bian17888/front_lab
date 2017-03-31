@@ -26,78 +26,104 @@
 
     <!-- build:css styles/app.css -->
     <!-- inject:css -->
-
     <link rel="stylesheet" href="/_tmp/styles/common.css">
-
     <link rel="stylesheet" href="/_tmp/styles/main.css">
-
     <!-- endinject -->
     <!-- endbuild -->
 
 </head>
 <body>
 
-    <div ng-include="'app/layout/shell.html'"></div>
+  <!-- update the browser (IE<10) -->
+  <!--[if lt IE 10]>
+  <div class="browsehappy-wrap" data-spm='browserhappy_1'>
+    <div class="browsehappy">
+      <p class="desc">浏览器版本<strong>过低</strong>，建议您对浏览器进行<a href="http://browsehappy.com/">升级</a>，以便获得更好的浏览体验。</p>
+      <table width="500" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <i class="mark-broswer mark-broswer-cm"></i>
+            <p>Chrome</p>
+            <p><a class="download-btn"
+                  href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html">下载</a></p>
+          </td>
+          <td>
+            <i class="mark-broswer mark-broswer-uc"></i>
+            <p>UC浏览器</p>
+            <p><a class="download-btn" href="http://www.uc.cn/ucbrowser/download/">下载</a></p>
+          </td>
+          <td>
+            <i class="mark-broswer mark-broswer-ff"></i>
+            <p>Firefox</p>
+            <p><a class="download-btn" href="http://www.firefox.com.cn/download/">下载</a></p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <![endif]-->
 
-<!-- build:js js/lib.js -->
-<!-- bower:js -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/extras.angular.plus/ngplus-overlay.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/toastr/toastr.js"></script>
-<script src="bower_components/moment/moment.js"></script>
-<script src="bower_components/rangy/rangy-core.js"></script>
-<script src="bower_components/rangy/rangy-classapplier.js"></script>
-<script src="bower_components/rangy/rangy-highlighter.js"></script>
-<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
-<script src="bower_components/rangy/rangy-serializer.js"></script>
-<script src="bower_components/rangy/rangy-textrange.js"></script>
-<script src="bower_components/textAngular/dist/textAngular.js"></script>
-<script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
-<script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
-<script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
+  <div ng-include="'app/layout/shell.html'"></div>
 
-<!-- build:js js/app.js -->
-<!-- inject:js -->
-<script src="/app/app.module.js"></script>
-<script src="/app/avengers/avengers.module.js"></script>
-<script src="/app/core/core.module.js"></script>
-<script src="/app/dashboard/dashboard.module.js"></script>
-<script src="/app/layout/layout.module.js"></script>
-<script src="/app/widgets/widgets.module.js"></script>
-<script src="/app/blocks/exception/exception.module.js"></script>
-<script src="/app/blocks/http/http.module.js"></script>
-<script src="/app/blocks/logger/logger.module.js"></script>
-<script src="/app/blocks/router/router.module.js"></script>
-<script src="/app/avengers/avengers.js"></script>
-<script src="/app/avengers/config.route.js"></script>
-<script src="/app/core/config.js"></script>
-<script src="/app/core/constants.js"></script>
-<script src="/app/core/dataservice.js"></script>
-<script src="/app/core/filter.js"></script>
-<script src="/app/core/run.js"></script>
-<script src="/app/core/utils.js"></script>
-<script src="/app/dashboard/config.route.js"></script>
-<script src="/app/dashboard/dashboard.js"></script>
-<script src="/app/layout/shell.js"></script>
-<script src="/app/layout/sidebar.js"></script>
-<script src="/app/blocks/exception/exception-handler.provider.js"></script>
-<script src="/app/blocks/exception/exception.js"></script>
-<script src="/app/blocks/http/http.js"></script>
-<script src="/app/blocks/logger/logger.js"></script>
-<script src="/app/blocks/router/router.js"></script>
-<!-- endinject -->
-<!-- inject:templates:js -->
-<!-- endinject -->
-<!-- endbuild -->
+  <!-- build:js js/lib.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/rangy/rangy-core.js"></script>
+  <script src="bower_components/rangy/rangy-classapplier.js"></script>
+  <script src="bower_components/rangy/rangy-highlighter.js"></script>
+  <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+  <script src="bower_components/rangy/rangy-serializer.js"></script>
+  <script src="bower_components/rangy/rangy-textrange.js"></script>
+  <script src="bower_components/textAngular/dist/textAngular.js"></script>
+  <script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+  <script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
+  <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+  <script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js js/app.js -->
+  <!-- inject:js -->
+  <script src="/app/app.module.js"></script>
+  <script src="/app/avengers/avengers.module.js"></script>
+  <script src="/app/core/core.module.js"></script>
+  <script src="/app/dashboard/dashboard.module.js"></script>
+  <script src="/app/layout/layout.module.js"></script>
+  <script src="/app/widgets/widgets.module.js"></script>
+  <script src="/app/blocks/exception/exception.module.js"></script>
+  <script src="/app/blocks/http/http.module.js"></script>
+  <script src="/app/blocks/logger/logger.module.js"></script>
+  <script src="/app/blocks/router/router.module.js"></script>
+  <script src="/app/avengers/avengers.js"></script>
+  <script src="/app/avengers/config.route.js"></script>
+  <script src="/app/core/config.js"></script>
+  <script src="/app/core/constants.js"></script>
+  <script src="/app/core/dataservice.js"></script>
+  <script src="/app/core/filter.js"></script>
+  <script src="/app/core/run.js"></script>
+  <script src="/app/core/utils.js"></script>
+  <script src="/app/dashboard/config.route.js"></script>
+  <script src="/app/dashboard/dashboard.js"></script>
+  <script src="/app/layout/shell.js"></script>
+  <script src="/app/layout/sidebar.js"></script>
+  <script src="/app/blocks/exception/exception-handler.provider.js"></script>
+  <script src="/app/blocks/exception/exception.js"></script>
+  <script src="/app/blocks/http/http.js"></script>
+  <script src="/app/blocks/logger/logger.js"></script>
+  <script src="/app/blocks/router/router.js"></script>
+  <!-- endinject -->
+  <!-- inject:templates:js -->
+  <!-- endinject -->
+  <!-- endbuild -->
 </body>
 </html>
