@@ -18,11 +18,19 @@
       }
     ],
     "func-names": "off",
+    "spaced-comment": "off",
+    "space-before-function-paren": [
+      "error",
+      "always"
+    ],
+    "consistent-return": "warn",
     "angular/log": "warn",
     "angular/typecheck-object": "warn",
     "angular/json-functions": "warn",
     "angular/timeout-service": "warn",
     "angular/module-getter": "warn",
+    "angular/on-watch": "warn",
+    "angular/controller-as-vm": "warn",
     "angular/controller-name": [
       "off",
       "/^[A-Z].*/"

@@ -13,7 +13,7 @@
   dataservice.$inject = ['$http', '$location', '$q', 'exception', 'logger'];
 
   /* @ngInject */
-  function dataservice($http, $location, $q, exception, logger) {
+  function dataservice ($http, $location, $q, exception, logger) {
     var isPrimed = false;
     var primePromise;
 
@@ -33,7 +33,8 @@
      * @param {Object} config - $http config
      * @returns {Object} $http promise
      */
-    function _commonAjax(config) {
+    function _commonAjax (config) {
+      var defer = $q.defer();
       var _config = {
         method: config.method || 'GET',
         url: config.url || '/',
@@ -42,19 +43,26 @@
       };
       var errInfo = 'XHR Failed for api ' + config.url;
 
-      return $http(_config)
-        .then(commonAjaxComplete)
+      $http(_config)
+        .then(commonAjaxComplete, commonAjaxError)
         .catch(function (message) {
           exception.catcher(errInfo)(message);
         });
 
-      function commonAjaxComplete(data) {
-        // data.data = { code : 0, data : data }
-        return data.data;
+      return defer.promise;
+
+      //////////////////////////////////////////////////
+
+      function commonAjaxComplete (data) {
+        defer.resolve(data);
+      }
+
+      function commonAjaxError (err) {
+        defer.reject(err);
       }
     }
 
-    function _prime() {
+    function _prime () {
       // This function can only be called once.
       if (isPrimed) {
         return primePromise;
@@ -62,13 +70,13 @@
       primePromise = $q.when(true).then(success);
       return primePromise;
 
-      function success() {
+      function success () {
         isPrimed = true;
         logger.info('Primed data');
       }
     }
 
-    function ready(nextPromises) {
+    function ready (nextPromises) {
       var readyPromise = primePromise || _prime();
 
       return readyPromise
@@ -82,7 +90,7 @@
      * @func getAvengers
      * @return {Object} getAvengers promise
      */
-    function getAvengers() {
+    function getAvengers () {
       var _config = {
         url: '/api/avengers'
       };
@@ -94,7 +102,7 @@
      * @func getFilms
      * @return {Object} getFilms promise
      */
-    function getFilms() {
+    function getFilms () {
       var _config = {
         url: '/api/films'
       };
