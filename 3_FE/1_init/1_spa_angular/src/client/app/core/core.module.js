@@ -12,10 +12,9 @@
       'ngAnimate', 'ngSanitize',
 
       /* Cross-app modules */
-      'blocks.logger', 'blocks.router', 'blocks.exception',
-      /* 'blocks.exception', 'blocks.logger', 'blocks.router', */
+      'blocks.logger', 'blocks.router', 'blocks.exception', 'blocks.http',
 
       /* 3rd-party modules */
-      'ngplus', 'ui.bootstrap'
+      'ngplus', 'ui.bootstrap', 'textAngular', 'ngTagsInput', 'ngFileUpload'
     ]);
 })();

@@ -28,7 +28,7 @@
   toastrConfig.$inject = ['toastr'];
 
   /* @ngInject */
-  function toastrConfig(toastr) {
+  function toastrConfig (toastr) {
     toastr.options.timeOut = 4000;
     toastr.options.positionClass = 'toast-bottom-right';
   }
@@ -42,7 +42,7 @@
   configure.$inject = ['$logProvider', '$routeProvider', 'routehelperConfigProvider', 'exceptionHandlerProvider'];
 
   /* @ngInject */
-  function configure($logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider) {
+  function configure ($logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider) {
     // turn debugging off/on (no info or warn)
     if ($logProvider.debugEnabled) {
       $logProvider.debugEnabled(true);
@@ -52,7 +52,8 @@
     routehelperConfigProvider.config.$routeProvider = $routeProvider;
     routehelperConfigProvider.config.docTitle = 'Beacon-NG';
 
-    var resolveAlways = { /* @ngInject */
+    var resolveAlways = {
+      /* @ngInject */
       // ready: function(dataservice) {
       //  return dataservice.ready();
       // }
@@ -64,5 +65,37 @@
 
     // Configure the common exception handler
     exceptionHandlerProvider.configure(config.appErrorPrefix);
+  }
+
+  /**
+   * http 拦截器 : 当 response 返回401时, 跳转到官网登录页
+   */
+  core.config(authHttpInterceptor);
+
+  authHttpInterceptor.$inject = ['$httpProvider'];
+
+  /* @ngInject */
+  function authHttpInterceptor ($httpProvider) {
+    $httpProvider.interceptors.push('auth.httpInterceptor');
+  }
+
+
+  /**
+   * textAngular 配置
+   */
+  core.config(textAngular);
+
+  textAngular.$inject = ['$provide'];
+
+  /* @ngInject */
+  function textAngular ($provide) {
+    $provide.decorator('taOptions', ['$delegate', function (taOptions) {
+      taOptions.toolbar = [
+        ['p', 'insertLink', 'bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol'],
+        ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],
+        ['redo', 'undo', 'clear']
+      ];
+      return taOptions;
+    }]);
   }
 })();
