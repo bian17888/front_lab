@@ -17,6 +17,14 @@ module.exports = function () {
     buildContent: build + 'content/',
 
     /**
+     * browserSync中的 log 设置
+     */
+    debug: {
+      logLevel: 'debug',
+      logPrefix: 'Connect'
+    },
+    
+    /**
      * node env
      */
     env: {

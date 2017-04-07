@@ -126,8 +126,8 @@ module.exports = function () {
       open: true,
       injectChanges: true,
       logFileChanges: true,
-      logLevel: 'debug',
-      logPrefix: 'sandtable',
+      logLevel: config.debug.logLevel,
+      logPrefix: config.debug.logPrefix,
       notify: true,
       reloadDelay: config.browserReloadDelay,
       middleware: middleware
