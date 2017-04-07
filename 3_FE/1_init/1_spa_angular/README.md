@@ -119,3 +119,4 @@
 - 持续集成
 - 优化
     - 初始化 hideSplash 遮罩层
+- 增加 gulp 对 html5Model 支持,稍后整理 (HTML5MODEL)

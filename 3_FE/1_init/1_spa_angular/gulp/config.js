@@ -22,7 +22,8 @@ module.exports = function () {
     env: {
       port: process.env.PORT || 3100,
       mock: process.env.MOCK || 'false',
-      node_env: process.env.NODE_ENV || 'development'
+      node_env: process.env.NODE_ENV || 'development',
+      html5Model: process.env.HTML5MODEL || 'false'
     },
 
     /**
@@ -78,7 +79,7 @@ module.exports = function () {
      */
     jsdoc: {
       bin: './node_modules/.bin/jsdoc ',
-      path : './jsdoc/'
+      path: './jsdoc/'
     }
 
   };

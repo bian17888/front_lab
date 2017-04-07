@@ -32,7 +32,7 @@ module.exports = function () {
    * @param {(string|object)} msg - 日志信息
    * @returns {void}
    */
-  function log(msg) {
+  function log (msg) {
     if (typeof (msg) === 'object') {
       for (var item in msg) {
         if (msg.hasOwnProperty(item)) {
@@ -50,7 +50,7 @@ module.exports = function () {
    * @param {(string|object)} path - 文件路径
    * @returns {void}
    */
-  function clean(path) {
+  function clean (path) {
     log('Cleaning : ' + path);
     del.sync(path);
   }
@@ -60,7 +60,7 @@ module.exports = function () {
    * @param {object} error - 错误信息
    * @returns {void}
    */
-  function errorLogger(error) {
+  function errorLogger (error) {
     log('*** Start of Error ***');
     log(error);
     log('*** End of Error ***');
@@ -74,7 +74,7 @@ module.exports = function () {
    * @returns {void}
    */
   // todo : 用正则截取文件路径
-  function changeEvent(event) {
+  function changeEvent (event) {
     log('File : ' + event.path + ' ' + event.type);
   }
 
@@ -84,7 +84,7 @@ module.exports = function () {
    * @param {boolean} isDev - 开发模式
    * @returns {void}
    */
-  function serve(isDev) {
+  function serve (isDev) {
     if (browserSync.active) {
       return;
     }
@@ -99,6 +99,14 @@ module.exports = function () {
         .on('change', changeEvent);
     }
 
+    // mock + html5Model 分别为 : mock 数据 + angular html5Model 开关
+    var middleware = [];
+    if (config.env.mock === 'true') {
+      middleware.push(mockData);
+    }
+    if (config.env.html5Model === 'true') {
+      middleware.push(html5Model);
+    }
     var options = {
       server: {
         baseDir: isDev ? config.client : config.build
@@ -122,7 +130,7 @@ module.exports = function () {
       logPrefix: 'sandtable',
       notify: true,
       reloadDelay: config.browserReloadDelay,
-      middleware: config.env.mock === 'true' ? [mockData] : []
+      middleware: middleware
     };
 
     browserSync.init(options);
@@ -130,7 +138,14 @@ module.exports = function () {
 
   // ////////////////////////////////////////////////
 
-  function mockData(req, res, next) {
+  /**
+   * 本地 Mock 数据
+   * @param {object} req - req
+   * @param {object} res - res
+   * @param {object} next - next
+   * @returns {void}
+   */
+  function mockData (req, res, next) {
     var theUrl = url.parse(req.url);
     theUrl = theUrl.pathname.replace('/', '');
     var json = mock[theUrl];
@@ -139,10 +154,36 @@ module.exports = function () {
       json = json();
       json = JSON.stringify(json);
       setTimeout(function () {
-        res.writeHead(200, {'Content-Type': 'application/json'});
+        // 模拟session3小时后失效
+        if (theUrl === 'user/authTimeout') {
+          res.writeHead(401, {'Content-Type': 'application/json'});
+        } else {
+          res.writeHead(200, {'Content-Type': 'application/json'});
+        }
         res.write(json, 'utf8');
         res.end();
       }, 500);
+    } else {
+      next();
+    }
+  }
+
+  /**
+   * 修复 angular 1.x 开启html5Model 模式, 刷新404问题
+   * 参考 :
+   *  http://stackoverflow.com/questions/4062260/nodejs-redirect-url
+   * @param {object} req - req
+   * @param {object} res - res
+   * @param {object} next - next
+   * @returns {void}
+   */
+  function html5Model (req, res, next) {
+    var theUrl = url.parse(req.url);
+    theUrl = theUrl.pathname.replace('/', '');
+
+    if (theUrl.search('suggestion/') !== -1) {
+      res.writeHead(302, {'Location': '/#!/' + theUrl});
+      res.end();
     } else {
       next();
     }
