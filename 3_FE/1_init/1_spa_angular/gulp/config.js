@@ -23,7 +23,7 @@ module.exports = function () {
       logLevel: 'debug',
       logPrefix: 'Connect'
     },
-    
+
     /**
      * node env
      */
