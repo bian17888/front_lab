@@ -1,20 +1,14 @@
 {
-  "name": "work_spa",
+  "name": "connect_admin",
   "version": "0.0.1",
-  "description": "for work",
+  "description": "connect admin",
   "author": [
     "Beck Bian"
   ],
-  "homepage": "https://github.com/johnpapa/pluralsight-gulp",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnpapa/pluralsight-gulp.git"
-  },
   "scripts": {
     "init": "tnpm install",
     "install": "bower install",
-    "start": "node src/server/app.js",
-    "test": "./node_modules/.bin/eslint ./gulp && echo '---- finish -----' "
+    "test": "./node_modules/.bin/eslint ./src/client/app && echo '---- finish -----' "
   },
   "pre-commit": [
     "test"
@@ -23,6 +17,7 @@
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "browser-sync": "^2.13.0",
+    "connect-modrewrite": "^0.10.1",
     "del": "~2.2.0",
     "eslint": "^3.14.0",
     "eslint-config-airbnb-es5": "^1.1.0",

@@ -16,8 +16,8 @@
 !**/source/*.zip
 **/bower_components/
 **/node_modules/
-**/build/
 **/_tmp/
+**/build/
 **/*.xmind
 
 ### 2_mpa_requirejs (多页静态应用) ###

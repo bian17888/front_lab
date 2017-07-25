@@ -1,0 +1,60 @@
+/**
+ * @file 1_lib - 基础样式库 + 第三方库
+ * @author beck 2017/7/25
+ */
+
+/*
+ * Reset样式
+ */
+ul, ol, li {
+	list-style: none;
+}
+
+/*
+ * 基础样式
+ */
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.mr-10
+	margin-right: 10px
+
+/*
+ * 第三方库
+ */
+@css {
+	// ngplus 插件样式
+	.ngplus-overlay-background {
+		top: 0px;
+		left: 0px;
+		padding-left: 100px;
+		position: absolute;
+		z-index: 10000;
+		height: 100%;
+		width: 100%;
+		background-color: #808080;
+		opacity: 0.2;
+	}
+	.ngplus-overlay-content {
+		position: absolute;
+		/*border: 1px solid #000;*/
+		/*background-color: #fff;*/
+		font-weight: bold;
+		height: 100px;
+		width: 300px;
+		height: 15em;
+		width: 20em;
+		z-index: 10000;
+		text-align: center;
+	}
+}

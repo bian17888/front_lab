@@ -29,7 +29,7 @@ module.exports = function () {
      */
     env: {
       port: process.env.PORT || 3100,
-      mock: process.env.MOCK || 'false',
+      mock: process.env.MOCK || 'true',
       node_env: process.env.NODE_ENV || 'development',
       html5Model: process.env.HTML5MODEL || 'false'
     },
@@ -41,7 +41,7 @@ module.exports = function () {
     htmltemplates: clientApp + '**/*.html',
     html: clientApp + '**/*.html',
     stylus: client + 'styles/**/*.styl',
-    css: tmp + 'styles/**/*.css',
+    css: tmp + '**/*.css',
     // alljs : 用于 eslint 语法检测
     alljs: [
       './gulp/**/*.js',
@@ -54,6 +54,7 @@ module.exports = function () {
     ],
     images: clientContent + 'images/**/*.*',
     fonts: clientContent + 'fonts/**/*.*',
+    libs: clientContent + 'libs/**/*.*',
 
     /**
      * templateCache

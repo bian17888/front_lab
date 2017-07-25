@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "========== 检测 fe-connect 语法 (Start) =========="
+cd ./fe-connect && npm test
+RESULT=$?
+
+
+echo "========== 检测 fe-m-connect 语法 (Start) =========="
+cd ../fe-m-connect && npm test
+RESULT2=$?
+
+if [ "${RESULT}" -eq 0 -a "${RESULT2}" -eq 0 ];
+then
+	exit 0 #成功退出
+else
+	exit 1
+fi

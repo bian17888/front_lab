@@ -10,6 +10,7 @@ module.exports = function () {
   var gulp = require('gulp');
   var del = require('del');
   var browserSync = require('browser-sync').create();
+  var modRewrite = require('connect-modrewrite');
 
   var config = require('../config')();
   var mock = require('../../mock/api');
@@ -99,13 +100,25 @@ module.exports = function () {
         .on('change', changeEvent);
     }
 
-    // mock + html5Model 分别为 : mock 数据 + angular html5Model 开关
     var middleware = [];
+    // 本地 mock 方案
     if (config.env.mock === 'true') {
       middleware.push(mockData);
     }
+    /**
+     * 修复 angular 1.x 开启html5Model 模式, 刷新404问题
+     * 参考 :
+     *  https://github.com/Swiip/generator-gulp-angular/issues/26
+     */
     if (config.env.html5Model === 'true') {
-      middleware.push(html5Model);
+      middleware.push(
+        modRewrite([
+          '^/suggestion/\\S* /index.html [L]',
+          '^/honor/\\S* /index.html [L]',
+          '^/users/\\S* /index.html [L]',
+          '^/error\\S* /index.html [L]'
+        ])
+      );
     }
     var options = {
       server: {
@@ -163,27 +176,6 @@ module.exports = function () {
         res.write(json, 'utf8');
         res.end();
       }, 500);
-    } else {
-      next();
-    }
-  }
-
-  /**
-   * 修复 angular 1.x 开启html5Model 模式, 刷新404问题
-   * 参考 :
-   *  http://stackoverflow.com/questions/4062260/nodejs-redirect-url
-   * @param {object} req - req
-   * @param {object} res - res
-   * @param {object} next - next
-   * @returns {void}
-   */
-  function html5Model (req, res, next) {
-    var theUrl = url.parse(req.url);
-    theUrl = theUrl.pathname.replace('/', '');
-
-    if (theUrl.search('suggestion/') !== -1) {
-      res.writeHead(302, {'Location': '/#!/' + theUrl});
-      res.end();
     } else {
       next();
     }

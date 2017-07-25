@@ -1,4 +1,7 @@
 {
+  "globals": {
+    "$": true
+  },
   "env": {
     "browser": true,
     "node": true
@@ -8,6 +11,13 @@
     "angular"
   ],
   "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
     "no-console": "off",
     "one-var": [
       "off",
@@ -24,6 +34,8 @@
       "always"
     ],
     "consistent-return": "warn",
+    "dot-notation": "warn",
+    "angular/window-service": "warn",
     "angular/log": "warn",
     "angular/typecheck-object": "warn",
     "angular/json-functions": "warn",
