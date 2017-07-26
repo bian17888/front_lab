@@ -1,0 +1,38 @@
+/**
+ * @file 2_common - 项目公共模块
+ * @author beck 2017/7/25
+ */
+
+/*
+ * 公共Directive
+ */
+.m-d-panel
+	z-index: 9
+
+/*
+ * 初始化遮罩层
+ */
+.m-page-splash
+	z-index: 99999
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: #333
+	opacity: .9
+	backface-visibility: hidden
+	transition: opacity 0.3s linear
+	.m-page-splash-message
+		text-align: center
+		margin: 20% auto 0
+		font-family: "Segoe UI", Arial, Helvetica, sans-serif
+		padding: 0 10%
+		h5
+			font-size: 400%
+			font-weight: normal
+			text-shadow: 2px 2px rgba(0, 0, 0, 0.15)
+			text-transform: uppercase
+			text-decoration: none
+			color: #f58a00
+			margin-bottom: 30px
