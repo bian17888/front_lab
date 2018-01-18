@@ -13,7 +13,7 @@
   Avengers.$inject = ['dataservice', 'logger'];
 
   /* @ngInject */
-  function Avengers(dataservice, logger) {
+  function Avengers (dataservice, logger) {
     var vm = this;
     vm.avengers = [];
     vm.title = 'avengers html !';
@@ -22,14 +22,14 @@
 
     // ////////////////////////////////////////////////
 
-    function activate() {
+    function activate () {
       var promises = [getAvengers()];
       return dataservice.ready(promises).then(function () {
         logger.success('Activated Avengers View');
       });
     }
 
-    function getAvengers() {
+    function getAvengers () {
       return dataservice.getAvengers().then(function (data) {
         vm.avengers = data.data;
         return vm.avengers;

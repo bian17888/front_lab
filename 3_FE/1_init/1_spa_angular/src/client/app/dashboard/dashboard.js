@@ -12,7 +12,7 @@
 
   Dashboard.$inject = ['logger', 'dataservice'];
 
-  function Dashboard(logger, dataservice) {
+  function Dashboard (logger, dataservice) {
     var vm = this;
     vm.title = 'dashboard html !';
     vm.avengers = [];
@@ -22,22 +22,22 @@
 
     // ////////////////////////////////////////////////
 
-    function activate() {
+    function activate () {
       var promises = [getAvengers(), getFilms()];
       return dataservice.ready(promises).then(function () {
         logger.success('Dashboard View Success!');
       });
     }
 
-    function getAvengers() {
-      dataservice.getAvengers().then(function (data) {
+    function getAvengers () {
+      return dataservice.getAvengers().then(function (data) {
         vm.avengers = data.data;
         return vm.avengers;
       });
     }
 
-    function getFilms() {
-      dataservice.getFilms().then(function (data) {
+    function getFilms () {
+      return dataservice.getFilms().then(function (data) {
         vm.films = data.data;
         return vm.films;
       });
